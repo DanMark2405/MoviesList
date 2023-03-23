@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		7A4B0B5529CC77DF003C3700 /* MoviesListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4B0B5429CC77DF003C3700 /* MoviesListApp.swift */; };
 		7A4B0B5729CC77DF003C3700 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4B0B5629CC77DF003C3700 /* ContentView.swift */; };
-		7A4B0B5929CC77E1003C3700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4B0B5829CC77E1003C3700 /* Assets.xcassets */; };
+		7A4B0B5929CC77E1003C3700 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4B0B5829CC77E1003C3700 /* Images.xcassets */; };
 		7A4B0B5C29CC77E1003C3700 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4B0B5B29CC77E1003C3700 /* Preview Assets.xcassets */; };
 		7A4B0B5E29CC77E1003C3700 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4B0B5D29CC77E1003C3700 /* Persistence.swift */; };
 		7A4B0B6129CC77E1003C3700 /* MoviesList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A4B0B5F29CC77E1003C3700 /* MoviesList.xcdatamodeld */; };
 		7A4B0B6B29CC77E1003C3700 /* MoviesListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4B0B6A29CC77E1003C3700 /* MoviesListTests.swift */; };
 		7A4B0B7529CC77E1003C3700 /* MoviesListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4B0B7429CC77E1003C3700 /* MoviesListUITests.swift */; };
 		7A4B0B7729CC77E1003C3700 /* MoviesListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4B0B7629CC77E1003C3700 /* MoviesListUITestsLaunchTests.swift */; };
+		7A4B0B8829CC7C00003C3700 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A4B0B8A29CC7C00003C3700 /* Localizable.strings */; };
+		7A4B0B9629CC8245003C3700 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4B0B9529CC8245003C3700 /* Colors.xcassets */; };
+		7A4B0B9929CC8278003C3700 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4B0B9729CC8278003C3700 /* Strings.swift */; };
+		7A4B0B9A29CC8278003C3700 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4B0B9829CC8278003C3700 /* XCAssets+Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,7 @@
 		7A4B0B5129CC77DF003C3700 /* MoviesList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4B0B5429CC77DF003C3700 /* MoviesListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListApp.swift; sourceTree = "<group>"; };
 		7A4B0B5629CC77DF003C3700 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7A4B0B5829CC77E1003C3700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A4B0B5829CC77E1003C3700 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7A4B0B5B29CC77E1003C3700 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A4B0B5D29CC77E1003C3700 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		7A4B0B6029CC77E1003C3700 /* MoviesList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoviesList.xcdatamodel; sourceTree = "<group>"; };
@@ -48,6 +52,11 @@
 		7A4B0B7029CC77E1003C3700 /* MoviesListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4B0B7429CC77E1003C3700 /* MoviesListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListUITests.swift; sourceTree = "<group>"; };
 		7A4B0B7629CC77E1003C3700 /* MoviesListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7A4B0B8929CC7C00003C3700 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7A4B0B8B29CC7C07003C3700 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7A4B0B9529CC8245003C3700 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		7A4B0B9729CC8278003C3700 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		7A4B0B9829CC8278003C3700 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +107,9 @@
 		7A4B0B5329CC77DF003C3700 /* MoviesList */ = {
 			isa = PBXGroup;
 			children = (
+				7A4B0B8529CC7BE1003C3700 /* Resources */,
 				7A4B0B5429CC77DF003C3700 /* MoviesListApp.swift */,
 				7A4B0B5629CC77DF003C3700 /* ContentView.swift */,
-				7A4B0B5829CC77E1003C3700 /* Assets.xcassets */,
 				7A4B0B5D29CC77E1003C3700 /* Persistence.swift */,
 				7A4B0B5F29CC77E1003C3700 /* MoviesList.xcdatamodeld */,
 				7A4B0B5A29CC77E1003C3700 /* Preview Content */,
@@ -133,6 +142,26 @@
 			path = MoviesListUITests;
 			sourceTree = "<group>";
 		};
+		7A4B0B8529CC7BE1003C3700 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7A4B0B8E29CC7E7E003C3700 /* SwiftGen */,
+				7A4B0B5829CC77E1003C3700 /* Images.xcassets */,
+				7A4B0B9529CC8245003C3700 /* Colors.xcassets */,
+				7A4B0B8A29CC7C00003C3700 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7A4B0B8E29CC7E7E003C3700 /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				7A4B0B9729CC8278003C3700 /* Strings.swift */,
+				7A4B0B9829CC8278003C3700 /* XCAssets+Generated.swift */,
+			);
+			path = SwiftGen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A4B0B7A29CC77E1003C3700 /* Build configuration list for PBXNativeTarget "MoviesList" */;
 			buildPhases = (
+				7A4B0B8329CC7A61003C3700 /* SwiftGen */,
 				7A4B0B4D29CC77DF003C3700 /* Sources */,
 				7A4B0B4E29CC77DF003C3700 /* Frameworks */,
 				7A4B0B4F29CC77DF003C3700 /* Resources */,
+				7A4B0B8429CC7ADC003C3700 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -219,6 +250,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 7A4B0B4829CC77DF003C3700;
 			productRefGroup = 7A4B0B5229CC77DF003C3700 /* Products */;
@@ -238,7 +270,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4B0B5C29CC77E1003C3700 /* Preview Assets.xcassets in Resources */,
-				7A4B0B5929CC77E1003C3700 /* Assets.xcassets in Resources */,
+				7A4B0B9629CC8245003C3700 /* Colors.xcassets in Resources */,
+				7A4B0B8829CC7C00003C3700 /* Localizable.strings in Resources */,
+				7A4B0B5929CC77E1003C3700 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +292,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7A4B0B8329CC7A61003C3700 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PROJECT_DIR}/swiftgen/bin/swiftgen\"\n";
+		};
+		7A4B0B8429CC7ADC003C3700 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7A4B0B4D29CC77DF003C3700 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -265,6 +338,8 @@
 			files = (
 				7A4B0B5E29CC77E1003C3700 /* Persistence.swift in Sources */,
 				7A4B0B5729CC77DF003C3700 /* ContentView.swift in Sources */,
+				7A4B0B9929CC8278003C3700 /* Strings.swift in Sources */,
+				7A4B0B9A29CC8278003C3700 /* XCAssets+Generated.swift in Sources */,
 				7A4B0B6129CC77E1003C3700 /* MoviesList.xcdatamodeld in Sources */,
 				7A4B0B5529CC77DF003C3700 /* MoviesListApp.swift in Sources */,
 			);
@@ -301,6 +376,18 @@
 			targetProxy = 7A4B0B7129CC77E1003C3700 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7A4B0B8A29CC7C00003C3700 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A4B0B8929CC7C00003C3700 /* en */,
+				7A4B0B8B29CC7C07003C3700 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7A4B0B7829CC77E1003C3700 /* Debug */ = {

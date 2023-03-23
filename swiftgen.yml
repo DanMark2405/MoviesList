@@ -1,0 +1,19 @@
+strings:
+  inputs: MoviesList/Resources/en.lproj/Localizable.strings
+  filter: .+\.strings$
+  outputs:
+      templateName: structured-swift5
+      output: MoviesList/Resources/SwiftGen/Strings.swift
+
+## XCAssets
+xcassets:
+  inputs:
+    - MoviesList/Resources/Images.xcassets
+    - MoviesList/Resources/Colors.xcassets
+  outputs:
+    templateName: swift5
+    # 1
+    params:
+       # 2
+       forceProvidesNamespaces: true
+    output: MoviesList/Resources/SwiftGen/XCAssets+Generated.swift
