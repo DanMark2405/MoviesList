@@ -10,12 +10,14 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
-  internal enum Test {
+  internal enum Common {
     /// Localizable.strings
     ///   MoviesList
     /// 
     ///   Created by Daniil Markish on 23/03/2023.
-    internal static let test = L10n.tr("Localizable", "test.test", fallback: "test")
+    internal static let email = L10n.tr("Localizable", "Common.email", fallback: "Email")
+    /// Password
+    internal static let password = L10n.tr("Localizable", "Common.password", fallback: "Password")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

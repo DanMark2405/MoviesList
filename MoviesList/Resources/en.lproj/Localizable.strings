@@ -5,4 +5,5 @@
   Created by Daniil Markish on 23/03/2023.
   
 */
-"test.test" = "test";
+"Common.email" = "Email";
+"Common.password" = "Password";
