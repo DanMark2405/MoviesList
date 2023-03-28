@@ -16,6 +16,11 @@ struct LoginView: View {
             Spacer()
             
             Group {
+                Button("login" , action: {
+                    Task {
+                        await viewModel.load()
+                    }
+                })
                 CustomizedTextField(text: $viewModel.email,
                                     isValid: $viewModel.isValidEmail,
                                     title: L10n.Common.email,

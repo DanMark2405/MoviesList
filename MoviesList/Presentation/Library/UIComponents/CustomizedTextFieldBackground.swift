@@ -22,19 +22,19 @@ struct CustomizedTextFieldBackground: View {
     
     var body: some View {
         Capsule()
-            .foregroundColor(.gray)
+            .fill(gradient)
             .background(
                 Capsule()
                     .stroke(gradient, lineWidth: 2)
-                    .offset(x: 0.5, y: 1)
-            )
-            .overlay(
-                Capsule()
-                    .stroke(Asset.Colors.textFieldBlack.uiColor, lineWidth: 4)
-                    .blur(radius: 2)
                     .offset(x: 1, y: 1)
-                    .mask(Capsule().fill(gradient1))
             )
+//            .overlay(
+//                Capsule()
+//                    .stroke(Asset.Colors.textFieldBlack.uiColor, lineWidth: 4)
+//                    .blur(radius: 2)
+//                    .offset(x: 1, y: 1)
+//                    .mask(Capsule().fill(gradient1))
+//            )
     }
 }
 
