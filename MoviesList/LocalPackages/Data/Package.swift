@@ -15,7 +15,8 @@ let package = Package(
             targets: ["Data"]),
     ],
     dependencies: [
-        .package(path: "../Domain")
+        .package(path: "../Domain"),
+        .package(url: "https://github.com/kishikawakatsumi/KeychainAccess.git",from: "4.2.2")
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -24,9 +25,9 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "Data",
-            dependencies: []),
+            dependencies: ["Domain", "KeychainAccess"]),
         .testTarget(
             name: "DataTests",
-            dependencies: ["Data"]),
+            dependencies: ["Data","Domain", "KeychainAccess"]),
     ]
 )

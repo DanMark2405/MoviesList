@@ -21,6 +21,7 @@
 		7A4B0B9A29CC8278003C3700 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4B0B9829CC8278003C3700 /* XCAssets+Generated.swift */; };
 		7AD3123F29D43C17002B6253 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 7AD3123E29D43C17002B6253 /* Data */; };
 		7AD3124129D43C17002B6253 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 7AD3124029D43C17002B6253 /* Domain */; };
+		7AD3124429D44170002B6253 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 7AD3124329D44170002B6253 /* KeychainAccess */; };
 		7AECEA2429D1B96C004129AA /* CustomizedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AECEA2329D1B96C004129AA /* CustomizedTextField.swift */; };
 		7AECEA2829D1BFB9004129AA /* CustomizedTextFieldBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AECEA2729D1BFB9004129AA /* CustomizedTextFieldBackground.swift */; };
 		7AECEA2A29D1C09A004129AA /* Assets+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AECEA2929D1C09A004129AA /* Assets+SwiftUI.swift */; };
@@ -78,6 +79,7 @@
 			files = (
 				7AD3124129D43C17002B6253 /* Domain in Frameworks */,
 				7AD3123F29D43C17002B6253 /* Data in Frameworks */,
+				7AD3124429D44170002B6253 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +269,7 @@
 			packageProductDependencies = (
 				7AD3123E29D43C17002B6253 /* Data */,
 				7AD3124029D43C17002B6253 /* Domain */,
+				7AD3124329D44170002B6253 /* KeychainAccess */,
 			);
 			productName = MoviesList;
 			productReference = 7A4B0B5129CC77DF003C3700 /* MoviesList.app */;
@@ -341,6 +344,9 @@
 				ru,
 			);
 			mainGroup = 7A4B0B4829CC77DF003C3700;
+			packageReferences = (
+				7AD3124229D44170002B6253 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 7A4B0B5229CC77DF003C3700 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -771,6 +777,17 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		7AD3124229D44170002B6253 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		7AD3123E29D43C17002B6253 /* Data */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -779,6 +796,11 @@
 		7AD3124029D43C17002B6253 /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Domain;
+		};
+		7AD3124329D44170002B6253 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AD3124229D44170002B6253 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 /* End XCSwiftPackageProductDependency section */
 

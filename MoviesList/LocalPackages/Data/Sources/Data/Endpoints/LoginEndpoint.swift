@@ -16,7 +16,6 @@ extension APIEndpoints {
         typealias ResultType = Response
         
         let path = "/auth/log-in"
-        //let body: Request
         let method: HTTPRequestMethod = .post
         
         init(email: String, password: String) {
