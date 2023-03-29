@@ -9,7 +9,7 @@ import Foundation
 
 public enum APIEndpoints {}
 
-protocol APIEndpoint {
+public protocol APIEndpoint {
     
     associatedtype ResultType
     
@@ -22,7 +22,7 @@ protocol APIEndpoint {
     var body: Encodable? { get }
 }
 
-extension APIEndpoint {
+public extension APIEndpoint {
     var scheme: String {
         return "https"
     }

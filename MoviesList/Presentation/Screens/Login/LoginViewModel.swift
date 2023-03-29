@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Data
 
 class LoginViewModel: ObservableObject {
     
@@ -18,13 +19,13 @@ class LoginViewModel: ObservableObject {
     
     func load() async {
         let apiClient = APIClientImpl()
-        let e = APIEndpoints.Login(email: "some@email.com", password: "123")
-        do {
-            let res = try await apiClient.request(e)
-            print(res)
-        } catch {
-            print(error)
-        }
+//        let e = APIEndpoints.Login(email: "some@email.com", password: "123")
+//        do {
+//            let res = try await apiClient.request(e)
+//            print(res)
+//        } catch {
+//            print(error)
+//        }
         
     }
     

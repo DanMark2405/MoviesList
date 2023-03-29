@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol APIClient {
+public protocol APIClient {
     func request<Endpoint: APIEndpoint>(_ endpoint: Endpoint) async throws
     func request<Endpoint: APIEndpoint>(_ endpoint: Endpoint) async throws -> Endpoint.ResultType where Endpoint.ResultType: Decodable
 }
@@ -23,7 +23,9 @@ public struct APIClientImpl: APIClient {
         return decoder
     }()
     
-    func request<Endpoint: APIEndpoint>(_ endpoint: Endpoint) async throws {
+    public init() {}
+    
+    public func request<Endpoint: APIEndpoint>(_ endpoint: Endpoint) async throws {
         let request = try endpoint.request()
         do {
             let (_, response) = try await URLSession.shared.data(for: request)
@@ -33,7 +35,7 @@ public struct APIClientImpl: APIClient {
         }
     }
     
-    func request<Endpoint : APIEndpoint>(_ endpoint: Endpoint) async throws -> Endpoint.ResultType where Endpoint.ResultType : Decodable {
+    public func request<Endpoint : APIEndpoint>(_ endpoint: Endpoint) async throws -> Endpoint.ResultType where Endpoint.ResultType : Decodable {
         let request = try endpoint.request()
         
         do {
