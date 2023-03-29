@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Domain
 
 extension APIEndpoints {
     
@@ -35,5 +36,14 @@ extension APIEndpoints {
             let email: String
         }
         
+    }
+}
+
+extension APIEndpoints.Login.Response {
+    var toModel: UserModel {
+        .init(nickname: nickname,
+              firstname: firstname,
+              surname: surname,
+              email: email)
     }
 }
