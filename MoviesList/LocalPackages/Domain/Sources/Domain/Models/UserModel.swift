@@ -15,6 +15,7 @@ public struct UserModel {
     let email: String
     
     public init(token: String, nickname: String, firstname: String, surname: String, email: String) {
+        self.token = token
         self.nickname = nickname
         self.firstname = firstname
         self.surname = surname

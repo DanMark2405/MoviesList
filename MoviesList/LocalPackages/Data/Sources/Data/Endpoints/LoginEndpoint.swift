@@ -41,7 +41,8 @@ extension APIEndpoints {
 
 extension APIEndpoints.Login.Response {
     var toModel: UserModel {
-        .init(nickname: nickname,
+        .init(token: token,
+              nickname: nickname,
               firstname: firstname,
               surname: surname,
               email: email)
