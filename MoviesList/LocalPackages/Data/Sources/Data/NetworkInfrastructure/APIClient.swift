@@ -12,9 +12,9 @@ public protocol APIClient {
     func request<Endpoint: APIEndpoint>(_ endpoint: Endpoint) async throws -> Endpoint.ResultType where Endpoint.ResultType: Decodable
 }
 
-public struct APIClientImpl: APIClient {
+public class APIClientImpl: APIClient {
     
-    private let jsonDecoder: JSONDecoder = {
+    let jsonDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
@@ -50,7 +50,7 @@ public struct APIClientImpl: APIClient {
         }
     }
     
-    private func processResponse(response: URLResponse?) throws {
+    func processResponse(response: URLResponse?) throws {
         guard let response = response as? HTTPURLResponse else {
             throw APIError.noResponse
         }
@@ -67,7 +67,7 @@ public struct APIClientImpl: APIClient {
         }
     }
     
-    private func processError(error: Error) throws {
+     func processError(error: Error) throws {
         switch error {
         case is APIError:
             throw error

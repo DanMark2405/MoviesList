@@ -8,12 +8,13 @@
 import Foundation
 
 public struct UserModel {
+    let token: String
     let nickname: String
     let firstname: String
     let surname: String
     let email: String
     
-    public init(nickname: String, firstname: String, surname: String, email: String) {
+    public init(token: String, nickname: String, firstname: String, surname: String, email: String) {
         self.nickname = nickname
         self.firstname = firstname
         self.surname = surname

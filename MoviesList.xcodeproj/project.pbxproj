@@ -125,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				7AD3123A29D43A92002B6253 /* LocalPackages */,
-				7AAF324E29D2DE8D00477959 /* Network */,
 				7AECEA1F29D1AB9B004129AA /* Presentation */,
 				7A4B0B8529CC7BE1003C3700 /* Resources */,
 				7A4B0B5429CC77DF003C3700 /* MoviesListApp.swift */,
@@ -180,13 +179,6 @@
 				7A4B0B9829CC8278003C3700 /* XCAssets+Generated.swift */,
 			);
 			path = SwiftGen;
-			sourceTree = "<group>";
-		};
-		7AAF324E29D2DE8D00477959 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		7AD3123A29D43A92002B6253 /* LocalPackages */ = {

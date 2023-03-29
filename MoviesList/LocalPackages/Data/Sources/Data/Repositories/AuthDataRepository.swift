@@ -16,6 +16,8 @@ public final class AuthDataRepositoryImpl: AuthDataRepository {
         static let token = "token"
     }
     
+    public init() {}
+    
     public var token: String? {
         keychain[Constants.token]
     }
