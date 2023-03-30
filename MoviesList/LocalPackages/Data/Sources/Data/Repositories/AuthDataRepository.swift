@@ -22,6 +22,14 @@ public final class AuthDataRepositoryImpl: AuthDataRepository {
         keychain[Constants.token]
     }
     
+    public var hasToken: Bool {
+        if let token = token, !token.isEmpty {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     public func setToken(_ token: String) {
         keychain[Constants.token] = token
     }

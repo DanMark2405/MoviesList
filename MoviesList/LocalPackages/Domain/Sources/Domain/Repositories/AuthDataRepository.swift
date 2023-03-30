@@ -9,6 +9,7 @@ import Foundation
 
 public protocol AuthDataRepository {
     var token: String? { get }
+    var hasToken: Bool { get }
     func setToken(_ token: String)
     func deleteToken()
 }

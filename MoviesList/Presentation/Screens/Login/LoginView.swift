@@ -10,35 +10,10 @@ import SwiftUI
 struct LoginView: View {
     
     @ObservedObject var viewModel = LoginViewModel()
+    @ObservedObject var coordinator = Coordinator()
     
     var body: some View {
-        VStack {
-            Spacer()
-            
-            Group {
-                Button("login" , action: {
-                    Task {
-                        await viewModel.load()
-                    }
-                })
-                CustomizedTextField(text: $viewModel.email,
-                                    isValid: $viewModel.isValidEmail,
-                                    title: L10n.Common.email,
-                                    placeholder: L10n.Common.email)
-     
-                
-                CustomizedTextField(text: $viewModel.password,
-                                    isValid: $viewModel.isValidPassword,
-                                    title: L10n.Common.password,
-                                    placeholder: L10n.Common.password)
-            }
-            .frame(height: 62)
-            .padding(.bottom, 40)
-            .padding(.horizontal, 35)
-            
-            Spacer()
-        }
-        .background(Asset.Colors.textFieldBlack.uiColor)
+           Text("asd")
     }
 }
 
@@ -47,3 +22,10 @@ struct LoginView_Previews: PreviewProvider {
         LoginView()
     }
 }
+
+class Coordinator: ObservableObject {
+    @Published var path = [LoginPath]()
+    @Published var isMain = false
+}
+
+
