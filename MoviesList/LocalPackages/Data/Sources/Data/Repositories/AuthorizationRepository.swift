@@ -10,13 +10,13 @@ import Domain
 
 public final class AuthorizationRepositoryImpl: AuthorizationRepository {
   
-    private let apiClient: APIClient
+    private let apiManager: APIManager
     
-    public init(apiClient: APIClient) {
-        self.apiClient = apiClient
+    public init(apiManager: APIManager) {
+        self.apiManager = apiManager
     }
     
     public func login(email: String, password: String) async throws -> UserModel {
-        try await apiClient.request(APIEndpoints.Login(email: email, password: password)).toModel
+        try await apiManager.request(APIEndpoints.Login(email: email, password: password)).toModel
     }
 }

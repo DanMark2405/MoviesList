@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Domain
 import Data
 
 class LoginViewModel: ObservableObject {
@@ -18,7 +19,10 @@ class LoginViewModel: ObservableObject {
     @Published var isValidPassword = true
     
     func load() async {
-        let apiClient = APIClientImpl()
+        let m = GuestAPIManager(httpClient: HTTPClientImpl())
+        let rep = AuthorizationRepositoryImpl(apiManager: m)
+        let u = LoginUseCase(authRepository: rep)
+        try? await u.run(email: "some@email.com", password: "123")
 //        let e = APIEndpoints.Login(email: "some@email.com", password: "123")
 //        do {
 //            let res = try await apiClient.request(e)

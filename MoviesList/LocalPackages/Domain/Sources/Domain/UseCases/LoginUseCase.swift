@@ -10,16 +10,16 @@ import Foundation
 public struct LoginUseCase {
     
     private let authRepository: AuthorizationRepository
-    private let authDataRepository: AuthDataRepository
+    private let authDataRepository: AuthDataRepository?
     
-    public init(authRepository: AuthorizationRepository, authDataRepository: AuthDataRepository) {
+    public init(authRepository: AuthorizationRepository, authDataRepository: AuthDataRepository? = nil) {
         self.authRepository = authRepository
         self.authDataRepository = authDataRepository
     }
     
     public func run(email: String, password: String) async throws -> UserModel {
         let data = try await authRepository.login(email: email, password: password)
-        authDataRepository.setToken(data.token)
+        //authDataRepository.setToken(data.token)
         return data
     }
 }

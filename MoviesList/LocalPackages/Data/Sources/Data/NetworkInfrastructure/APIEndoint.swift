@@ -24,11 +24,11 @@ public protocol APIEndpoint {
 
 public extension APIEndpoint {
     var scheme: String {
-        return "https"
+        return "http"
     }
 
     var host: String {
-        return "d195-37-212-57-248.eu.ngrok.io"
+        return "movielist.elishakravchuk.ninja"
     }
     
     var method: HTTPRequestMethod {

@@ -14,5 +14,10 @@ public enum APIError: Error {
     case unknown
     case unauthorized
     case notConnected
-    case serverError(error: URLError) 
+    case serverError(description: String)
 }
+
+public struct ServerErrorModel: Decodable {
+    let error: String
+}
+

@@ -36,6 +36,10 @@ extension APIEndpoints {
             let email: String
         }
         
+        struct Data {
+            let error: String
+        }
+
     }
 }
 

@@ -13,7 +13,11 @@ struct LoginView: View {
     @ObservedObject var coordinator = Coordinator()
     
     var body: some View {
-           Text("asd")
+        Button("ask") {
+            Task {
+               await viewModel.load()
+            }
+        }
     }
 }
 
