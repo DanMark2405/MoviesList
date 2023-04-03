@@ -34,7 +34,6 @@ struct CustomizedTextField: View {
             .font(.system(size: 20).bold())
             .foregroundColor(Asset.Colors.white.uiColor.opacity(0.2))
             .padding()
-            .background(CustomizedTextFieldBackground())
     }
     
 
