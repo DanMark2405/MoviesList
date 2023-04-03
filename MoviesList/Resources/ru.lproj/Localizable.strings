@@ -7,3 +7,10 @@
 */
 "Common.email" = "Емейл";
 "Common.password" = "Пароль";
+
+"Error.invalidURL" = "Неккоректный путь для запроса";
+"Error.noResponse" = "Нет ответа от сервера";
+"Error.decodeError" = "Ошибка чтения данных";
+"Error.unknownError" = "Неизвестная ошибка";
+"Error.unauthorized" = "Юзер не авторизован";
+"Error.noConnection" = "Ошибка соединения с Интернетом";

@@ -26,6 +26,8 @@
 		7AD3123F29D43C17002B6253 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 7AD3123E29D43C17002B6253 /* Data */; };
 		7AD3124129D43C17002B6253 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 7AD3124029D43C17002B6253 /* Domain */; };
 		7AD3124429D44170002B6253 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 7AD3124329D44170002B6253 /* KeychainAccess */; };
+		7AE1150F29DAB6FA00DEADDC /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1150E29DAB6FA00DEADDC /* String+Extensions.swift */; };
+		7AE1151129DABA5100DEADDC /* APIError+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1151029DABA5100DEADDC /* APIError+Localized.swift */; };
 		7AECEA2429D1B96C004129AA /* CustomizedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AECEA2329D1B96C004129AA /* CustomizedTextField.swift */; };
 		7AECEA2829D1BFB9004129AA /* CustomizedTextFieldBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AECEA2729D1BFB9004129AA /* CustomizedTextFieldBackground.swift */; };
 		7AECEA2A29D1C09A004129AA /* Assets+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AECEA2929D1C09A004129AA /* Assets+SwiftUI.swift */; };
@@ -74,6 +76,8 @@
 		7AD3123B29D43AB9002B6253 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Data; sourceTree = "<group>"; };
 		7AD3123C29D43BCD002B6253 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		7AD6FD5C29D729F700080966 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7AE1150E29DAB6FA00DEADDC /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		7AE1151029DABA5100DEADDC /* APIError+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIError+Localized.swift"; sourceTree = "<group>"; };
 		7AECEA2329D1B96C004129AA /* CustomizedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedTextField.swift; sourceTree = "<group>"; };
 		7AECEA2729D1BFB9004129AA /* CustomizedTextFieldBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedTextFieldBackground.swift; sourceTree = "<group>"; };
 		7AECEA2929D1C09A004129AA /* Assets+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assets+SwiftUI.swift"; sourceTree = "<group>"; };
@@ -133,13 +137,14 @@
 		7A4B0B5329CC77DF003C3700 /* MoviesList */ = {
 			isa = PBXGroup;
 			children = (
-				7AD6FD5C29D729F700080966 /* Info.plist */,
 				7AD3123A29D43A92002B6253 /* LocalPackages */,
 				7AECEA1F29D1AB9B004129AA /* Presentation */,
 				7A4B0B8529CC7BE1003C3700 /* Resources */,
+				7AE1150D29DAB6A400DEADDC /* Extensions */,
 				7A4B0B5429CC77DF003C3700 /* MoviesListApp.swift */,
 				7A4B0B5D29CC77E1003C3700 /* Persistence.swift */,
 				7A4B0B5F29CC77E1003C3700 /* MoviesList.xcdatamodeld */,
+				7AD6FD5C29D729F700080966 /* Info.plist */,
 				7A4B0B5A29CC77E1003C3700 /* Preview Content */,
 			);
 			path = MoviesList;
@@ -224,6 +229,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7AE1150D29DAB6A400DEADDC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7AE1150E29DAB6FA00DEADDC /* String+Extensions.swift */,
+				7AE1151029DABA5100DEADDC /* APIError+Localized.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		7AECEA1F29D1AB9B004129AA /* Presentation */ = {
@@ -461,7 +475,9 @@
 				7A4B0B9929CC8278003C3700 /* Strings.swift in Sources */,
 				7A4B0B9A29CC8278003C3700 /* XCAssets+Generated.swift in Sources */,
 				7AB1671029D5BA8300AD80CA /* AppPath.swift in Sources */,
+				7AE1151129DABA5100DEADDC /* APIError+Localized.swift in Sources */,
 				7A4B0B6129CC77E1003C3700 /* MoviesList.xcdatamodeld in Sources */,
+				7AE1150F29DAB6FA00DEADDC /* String+Extensions.swift in Sources */,
 				7AECEA2829D1BFB9004129AA /* CustomizedTextFieldBackground.swift in Sources */,
 				7AECEA2C29D1C545004129AA /* LoginView.swift in Sources */,
 				7AB1670B29D5B4B700AD80CA /* RootPath.swift in Sources */,

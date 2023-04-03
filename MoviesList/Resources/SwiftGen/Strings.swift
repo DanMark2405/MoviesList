@@ -19,6 +19,20 @@ internal enum L10n {
     /// Password
     internal static let password = L10n.tr("Localizable", "Common.password", fallback: "Password")
   }
+  internal enum Error {
+    /// Decode Error
+    internal static let decodeError = L10n.tr("Localizable", "Error.decodeError", fallback: "Decode Error")
+    /// Invalid URL
+    internal static let invalidURL = L10n.tr("Localizable", "Error.invalidURL", fallback: "Invalid URL")
+    /// Internet connection error
+    internal static let noConnection = L10n.tr("Localizable", "Error.noConnection", fallback: "Internet connection error")
+    /// No Server Response
+    internal static let noResponse = L10n.tr("Localizable", "Error.noResponse", fallback: "No Server Response")
+    /// User is not authorized
+    internal static let unauthorized = L10n.tr("Localizable", "Error.unauthorized", fallback: "User is not authorized")
+    /// Unknown Error
+    internal static let unknownError = L10n.tr("Localizable", "Error.unknownError", fallback: "Unknown Error")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

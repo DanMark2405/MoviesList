@@ -7,3 +7,11 @@
 */
 "Common.email" = "Email";
 "Common.password" = "Password";
+
+
+"Error.invalidURL" = "Invalid URL";
+"Error.noResponse" = "No Server Response";
+"Error.decodeError" = "Decode Error";
+"Error.unknownError" = "Unknown Error";
+"Error.unauthorized" = "User is not authorized";
+"Error.noConnection" = "Internet connection error";
