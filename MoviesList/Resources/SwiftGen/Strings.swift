@@ -16,6 +16,8 @@ internal enum L10n {
     /// 
     ///   Created by Daniil Markish on 23/03/2023.
     internal static let email = L10n.tr("Localizable", "Common.email", fallback: "Email")
+    /// Nickname
+    internal static let nickname = L10n.tr("Localizable", "Common.nickname", fallback: "Nickname")
     /// Password
     internal static let password = L10n.tr("Localizable", "Common.password", fallback: "Password")
   }

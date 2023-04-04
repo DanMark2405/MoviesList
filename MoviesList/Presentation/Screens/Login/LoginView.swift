@@ -13,11 +13,16 @@ struct LoginView: View {
     @ObservedObject var coordinator = Coordinator()
     
     var body: some View {
-        Button("ask") {
-            Task {
-               await viewModel.load()
+        ZStack {
+            Asset.Colors.backgroundColor.swiftUIColor
+            
+            VStack {
+                CustomizedTextField.email(text: $viewModel.email, promt: $viewModel.emailPromt)
+                    .padding()
+                SecureTextField(text: $viewModel.password, promt: $viewModel.passwordPromt)
+                    .padding()
             }
-        }
+        }.ignoresSafeArea()
     }
 }
 

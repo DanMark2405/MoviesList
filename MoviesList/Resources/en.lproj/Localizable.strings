@@ -7,7 +7,7 @@
 */
 "Common.email" = "Email";
 "Common.password" = "Password";
-
+"Common.nickname" = "Nickname";
 
 "Error.invalidURL" = "Invalid URL";
 "Error.noResponse" = "No Server Response";

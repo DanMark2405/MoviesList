@@ -13,10 +13,10 @@ import Data
 class LoginViewModel: ObservableObject {
     
     @Published var email = ""
-    @Published var isValidEmail = true
+    @Published var emailPromt = "res"
     
     @Published var password = ""
-    @Published var isValidPassword = true
+    @Published var passwordPromt = "resept"
     
     func load() async {
         let m = GuestAPIManager(httpClient: HTTPClientImpl())

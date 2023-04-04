@@ -18,6 +18,8 @@ struct GradientButtonStyle: ButtonStyle {
             .padding()
             .background(LinearGradient.bluePurpleHorizontal)
             .cornerRadius(16)
+            .foregroundColor(.white)
+            .font(.title.bold())
     }
 
 }

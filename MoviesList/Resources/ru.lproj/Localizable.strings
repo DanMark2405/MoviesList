@@ -7,6 +7,7 @@
 */
 "Common.email" = "Емейл";
 "Common.password" = "Пароль";
+"Common.nickname" = "Никнейм";
 
 "Error.invalidURL" = "Неккоректный путь для запроса";
 "Error.noResponse" = "Нет ответа от сервера";
