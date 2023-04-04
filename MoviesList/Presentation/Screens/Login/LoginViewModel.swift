@@ -19,6 +19,8 @@ final class LoginViewModel: ObservableObject {
     @Published var password = ""
     @Published var passwordPromt = "resept"
     
+    @Published var isEnableButton = false
+    
     init() {
         setup()
     }
@@ -26,12 +28,19 @@ final class LoginViewModel: ObservableObject {
     func setup() {
         
         $email
-            .validate(.email)
+            .validationMessage(.email)
             .assign(to: &$emailPromt)
         
         $password
-            .validate(.password)
+            .validationMessage(.password)
             .assign(to: &$passwordPromt)
+        
+        $email.isValid(.email)
+            .combineLatest($password.isValid(.password))
+            .map { a, b in
+                return a && b
+            }
+            .assign(to: &$isEnableButton)
     }
     
     func load() async {

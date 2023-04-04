@@ -17,11 +17,20 @@ struct LoginView: View {
             Asset.Colors.backgroundColor.swiftUIColor
             
             VStack {
+                Text("Welcome Back")
+                    .font(.largeTitle.bold())
+                    .foregroundStyle(LinearGradient.bluePurpleHorizontal)
                 CustomizedTextField.email(text: $viewModel.email, promt: $viewModel.emailPromt)
                     .padding()
                 SecureTextField(text: $viewModel.password, promt: $viewModel.passwordPromt)
                     .padding()
+                Button("Confirm", action: {})
+                    .buttonStyle(.gradient)
+                    .frame(height: 55)
+                    .disabled(!viewModel.isEnableButton)
+                    .padding(.horizontal, 50)
             }
+            .animation(.easeInOut)
         }.ignoresSafeArea()
     }
 }
