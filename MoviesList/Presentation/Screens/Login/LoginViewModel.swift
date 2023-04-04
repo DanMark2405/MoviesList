@@ -9,14 +9,30 @@ import Foundation
 import SwiftUI
 import Domain
 import Data
+import Combine
 
-class LoginViewModel: ObservableObject {
+final class LoginViewModel: ObservableObject {
     
     @Published var email = ""
     @Published var emailPromt = "res"
     
     @Published var password = ""
     @Published var passwordPromt = "resept"
+    
+    init() {
+        setup()
+    }
+    
+    func setup() {
+        
+        $email
+            .validate(.email)
+            .assign(to: &$emailPromt)
+        
+        $password
+            .validate(.password)
+            .assign(to: &$passwordPromt)
+    }
     
     func load() async {
         let m = GuestAPIManager(httpClient: HTTPClientImpl())
@@ -34,3 +50,6 @@ class LoginViewModel: ObservableObject {
     }
     
 }
+
+
+

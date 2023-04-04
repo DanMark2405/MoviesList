@@ -35,6 +35,14 @@ internal enum L10n {
     /// Unknown Error
     internal static let unknownError = L10n.tr("Localizable", "Error.unknownError", fallback: "Unknown Error")
   }
+  internal enum Validation {
+    /// Invalid email!
+    internal static let email = L10n.tr("Localizable", "Validation.email", fallback: "Invalid email!")
+    /// Your nickname must contain at least 3 characters
+    internal static let nickname = L10n.tr("Localizable", "Validation.nickname", fallback: "Your nickname must contain at least 3 characters")
+    /// Your password must contain at least 8 characters, numbers, at least 1 letter in uppercase and one special character!
+    internal static let password = L10n.tr("Localizable", "Validation.password", fallback: "Your password must contain at least 8 characters, numbers, at least 1 letter in uppercase and one special character!")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

@@ -9,6 +9,10 @@
 "Common.password" = "Password";
 "Common.nickname" = "Nickname";
 
+"Validation.email" = "Invalid email!";
+"Validation.password" = "Your password must contain at least 8 characters, numbers, at least 1 letter in uppercase and one special character!";
+"Validation.nickname" = "Your nickname must contain at least 3 characters";
+
 "Error.invalidURL" = "Invalid URL";
 "Error.noResponse" = "No Server Response";
 "Error.decodeError" = "Decode Error";

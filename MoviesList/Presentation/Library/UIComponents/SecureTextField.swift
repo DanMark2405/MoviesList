@@ -25,8 +25,9 @@ struct SecureTextField: View {
             
             if !promt.isEmpty {
                 promtView
+                    .transition(.promtTransition)
             }
-        }
+        }.animation(.easeInOut, value: promt.isEmpty)
     }
     
     var promtView: some View  {

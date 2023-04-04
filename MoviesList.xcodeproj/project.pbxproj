@@ -28,6 +28,9 @@
 		7AB3CAAE29DAEA2E00248E52 /* LinearGradient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3CAAD29DAEA2E00248E52 /* LinearGradient+Extensions.swift */; };
 		7AB3CAB029DAF42500248E52 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3CAAF29DAF42500248E52 /* Image+Extension.swift */; };
 		7AB3CAB229DAFB8300248E52 /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3CAB129DAFB8300248E52 /* GradientButtonStyle.swift */; };
+		7ACC03F529DC456200D53748 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACC03F429DC456200D53748 /* Validation.swift */; };
+		7ACC03F729DC4C7100D53748 /* AnyPublisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACC03F629DC4C7100D53748 /* AnyPublisher+Extensions.swift */; };
+		7ACC03F929DC513000D53748 /* AnyTransition+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACC03F829DC513000D53748 /* AnyTransition+Extensions.swift */; };
 		7AD0253F29DC1F98000A0654 /* SecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0253E29DC1F98000A0654 /* SecureTextField.swift */; };
 		7AD3123F29D43C17002B6253 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 7AD3123E29D43C17002B6253 /* Data */; };
 		7AD3124129D43C17002B6253 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 7AD3124029D43C17002B6253 /* Domain */; };
@@ -83,6 +86,9 @@
 		7AB3CAAD29DAEA2E00248E52 /* LinearGradient+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LinearGradient+Extensions.swift"; sourceTree = "<group>"; };
 		7AB3CAAF29DAF42500248E52 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 		7AB3CAB129DAFB8300248E52 /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
+		7ACC03F429DC456200D53748 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		7ACC03F629DC4C7100D53748 /* AnyPublisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+Extensions.swift"; sourceTree = "<group>"; };
+		7ACC03F829DC513000D53748 /* AnyTransition+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Extensions.swift"; sourceTree = "<group>"; };
 		7AD0253E29DC1F98000A0654 /* SecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextField.swift; sourceTree = "<group>"; };
 		7AD3123B29D43AB9002B6253 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Data; sourceTree = "<group>"; };
 		7AD3123C29D43BCD002B6253 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
@@ -239,8 +245,17 @@
 			children = (
 				7AB3CAAD29DAEA2E00248E52 /* LinearGradient+Extensions.swift */,
 				7AB3CAAF29DAF42500248E52 /* Image+Extension.swift */,
+				7ACC03F829DC513000D53748 /* AnyTransition+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7ACC03F329DC450500D53748 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7ACC03F429DC456200D53748 /* Validation.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		7AD3123A29D43A92002B6253 /* LocalPackages */ = {
@@ -264,6 +279,7 @@
 			children = (
 				7AE1150E29DAB6FA00DEADDC /* String+Extensions.swift */,
 				7AE1151029DABA5100DEADDC /* APIError+Localized.swift */,
+				7ACC03F629DC4C7100D53748 /* AnyPublisher+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -271,6 +287,7 @@
 		7AECEA1F29D1AB9B004129AA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				7ACC03F329DC450500D53748 /* Utils */,
 				7AB1670729D5B35E00AD80CA /* Navigation */,
 				7AECEA2229D1AC2D004129AA /* Screens */,
 				7AECEA2129D1AC16004129AA /* Library */,
@@ -506,10 +523,13 @@
 				7AECEA2429D1B96C004129AA /* CustomizedTextField.swift in Sources */,
 				7A4B0B9929CC8278003C3700 /* Strings.swift in Sources */,
 				7A4B0B9A29CC8278003C3700 /* XCAssets+Generated.swift in Sources */,
+				7ACC03F529DC456200D53748 /* Validation.swift in Sources */,
 				7AB1671029D5BA8300AD80CA /* AppPath.swift in Sources */,
 				7AE1151129DABA5100DEADDC /* APIError+Localized.swift in Sources */,
+				7ACC03F729DC4C7100D53748 /* AnyPublisher+Extensions.swift in Sources */,
 				7AB3CAB229DAFB8300248E52 /* GradientButtonStyle.swift in Sources */,
 				7AB3CAAE29DAEA2E00248E52 /* LinearGradient+Extensions.swift in Sources */,
+				7ACC03F929DC513000D53748 /* AnyTransition+Extensions.swift in Sources */,
 				7AB3CAAB29DAE90800248E52 /* SelectAvatarView.swift in Sources */,
 				7A4B0B6129CC77E1003C3700 /* MoviesList.xcdatamodeld in Sources */,
 				7AB3CAA829DAE8DD00248E52 /* SelectAvatarViewModel.swift in Sources */,
