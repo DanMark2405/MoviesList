@@ -25,6 +25,7 @@ struct SecureTextField: View {
             
             if !promt.isEmpty {
                 promtView
+                    .padding(.horizontal, 6)
                     .transition(.promtTransition)
             }
         }.animation(.easeInOut, value: promt.isEmpty)
@@ -33,7 +34,9 @@ struct SecureTextField: View {
     var promtView: some View  {
         Text(promt)
             .foregroundColor(Asset.Colors.errorColor.swiftUIColor)
-            .font(.system(size: 12))
+            .font(.rubikSemiBold(10))
+            .multilineTextAlignment(.center)
+            .lineLimit(2)
     }
     
     var field: some View {
@@ -50,7 +53,7 @@ struct SecureTextField: View {
                     SecureField(L10n.Common.password, text: $text)
                 }
             }  .foregroundColor(.white)
-                .font(.title2.bold())
+                .font(.rubikRegular(18))
                 .keyboardType(.asciiCapable)
             
             Button {

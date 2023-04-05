@@ -13,9 +13,7 @@ struct LoginView: View {
     @ObservedObject var coordinator = Coordinator()
     
     var body: some View {
-        ZStack {
-            Asset.Colors.backgroundColor.swiftUIColor
-            
+        BackgroundContainer {
             VStack {
                 Text("Welcome Back")
                     .font(.largeTitle.bold())
@@ -29,9 +27,9 @@ struct LoginView: View {
                     .frame(height: 55)
                     .disabled(!viewModel.isEnableButton)
                     .padding(.horizontal, 50)
-            }
-            .animation(.easeInOut)
-        }.ignoresSafeArea()
+                
+            }.animation(.easeInOut)
+        }
     }
 }
 
