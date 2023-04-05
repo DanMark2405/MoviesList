@@ -22,7 +22,7 @@ struct GradientButtonStyle: ButtonStyle {
         }.background(isEnabled ? LinearGradient.bluePurpleHorizontal : LinearGradient.gray)
             .cornerRadius(16)
             .foregroundColor(.white)
-            .font(.title2.bold())
+            .font(.rubikSemiBold(20))
             .scaleEffect(configuration.isPressed ? 0.9 : 1)
             .opacity(configuration.isPressed ? 0.9 : 1)
     }

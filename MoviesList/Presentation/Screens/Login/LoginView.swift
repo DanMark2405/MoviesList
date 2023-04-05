@@ -24,7 +24,7 @@ struct LoginView: View {
                     .padding()
                 SecureTextField(text: $viewModel.password, promt: $viewModel.passwordPromt)
                     .padding()
-                Button("Confirm", action: {})
+                Button("Login", action: {})
                     .buttonStyle(.gradient)
                     .frame(height: 55)
                     .disabled(!viewModel.isEnableButton)

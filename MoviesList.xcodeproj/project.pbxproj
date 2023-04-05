@@ -35,6 +35,13 @@
 		7AD3123F29D43C17002B6253 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 7AD3123E29D43C17002B6253 /* Data */; };
 		7AD3124129D43C17002B6253 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 7AD3124029D43C17002B6253 /* Domain */; };
 		7AD3124429D44170002B6253 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 7AD3124329D44170002B6253 /* KeychainAccess */; };
+		7AD5A1BD29DD5EDA00AF8D81 /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AD5A1AF29DD5ED900AF8D81 /* Rubik-SemiBold.ttf */; };
+		7AD5A1BE29DD5EDA00AF8D81 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AD5A1B029DD5EDA00AF8D81 /* Rubik-Medium.ttf */; };
+		7AD5A1BF29DD5EDA00AF8D81 /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AD5A1B129DD5EDA00AF8D81 /* Rubik-ExtraBold.ttf */; };
+		7AD5A1C329DD5EDA00AF8D81 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AD5A1B529DD5EDA00AF8D81 /* Rubik-Bold.ttf */; };
+		7AD5A1C529DD5EDA00AF8D81 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AD5A1B729DD5EDA00AF8D81 /* Rubik-Black.ttf */; };
+		7AD5A1C729DD5EDA00AF8D81 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AD5A1B929DD5EDA00AF8D81 /* Rubik-Regular.ttf */; };
+		7AD5A1CB29DD607E00AF8D81 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD5A1CA29DD607E00AF8D81 /* Font+Extensions.swift */; };
 		7AE1150F29DAB6FA00DEADDC /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1150E29DAB6FA00DEADDC /* String+Extensions.swift */; };
 		7AE1151129DABA5100DEADDC /* APIError+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1151029DABA5100DEADDC /* APIError+Localized.swift */; };
 		7AECEA2429D1B96C004129AA /* CustomizedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AECEA2329D1B96C004129AA /* CustomizedTextField.swift */; };
@@ -92,6 +99,13 @@
 		7AD0253E29DC1F98000A0654 /* SecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextField.swift; sourceTree = "<group>"; };
 		7AD3123B29D43AB9002B6253 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Data; sourceTree = "<group>"; };
 		7AD3123C29D43BCD002B6253 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
+		7AD5A1AF29DD5ED900AF8D81 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
+		7AD5A1B029DD5EDA00AF8D81 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		7AD5A1B129DD5EDA00AF8D81 /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
+		7AD5A1B529DD5EDA00AF8D81 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		7AD5A1B729DD5EDA00AF8D81 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
+		7AD5A1B929DD5EDA00AF8D81 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		7AD5A1CA29DD607E00AF8D81 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
 		7AD6FD5C29D729F700080966 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7AE1150E29DAB6FA00DEADDC /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		7AE1151029DABA5100DEADDC /* APIError+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIError+Localized.swift"; sourceTree = "<group>"; };
@@ -194,6 +208,7 @@
 		7A4B0B8529CC7BE1003C3700 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7AD5A19B29DD5DF700AF8D81 /* Fonts */,
 				7A4B0B8E29CC7E7E003C3700 /* SwiftGen */,
 				7A4B0B5829CC77E1003C3700 /* Images.xcassets */,
 				7A4B0B9529CC8245003C3700 /* Colors.xcassets */,
@@ -243,6 +258,7 @@
 		7AB3CAAC29DAEA1900248E52 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7AD5A1CA29DD607E00AF8D81 /* Font+Extensions.swift */,
 				7AB3CAAD29DAEA2E00248E52 /* LinearGradient+Extensions.swift */,
 				7AB3CAAF29DAF42500248E52 /* Image+Extension.swift */,
 				7ACC03F829DC513000D53748 /* AnyTransition+Extensions.swift */,
@@ -272,6 +288,19 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7AD5A19B29DD5DF700AF8D81 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7AD5A1B729DD5EDA00AF8D81 /* Rubik-Black.ttf */,
+				7AD5A1B529DD5EDA00AF8D81 /* Rubik-Bold.ttf */,
+				7AD5A1B129DD5EDA00AF8D81 /* Rubik-ExtraBold.ttf */,
+				7AD5A1B029DD5EDA00AF8D81 /* Rubik-Medium.ttf */,
+				7AD5A1B929DD5EDA00AF8D81 /* Rubik-Regular.ttf */,
+				7AD5A1AF29DD5ED900AF8D81 /* Rubik-SemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		7AE1150D29DAB6A400DEADDC /* Extensions */ = {
@@ -447,10 +476,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AD5A1C329DD5EDA00AF8D81 /* Rubik-Bold.ttf in Resources */,
 				7A4B0B5C29CC77E1003C3700 /* Preview Assets.xcassets in Resources */,
 				7A4B0B9629CC8245003C3700 /* Colors.xcassets in Resources */,
+				7AD5A1BD29DD5EDA00AF8D81 /* Rubik-SemiBold.ttf in Resources */,
 				7A4B0B8829CC7C00003C3700 /* Localizable.strings in Resources */,
+				7AD5A1C729DD5EDA00AF8D81 /* Rubik-Regular.ttf in Resources */,
 				7A4B0B5929CC77E1003C3700 /* Images.xcassets in Resources */,
+				7AD5A1BF29DD5EDA00AF8D81 /* Rubik-ExtraBold.ttf in Resources */,
+				7AD5A1C529DD5EDA00AF8D81 /* Rubik-Black.ttf in Resources */,
+				7AD5A1BE29DD5EDA00AF8D81 /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +555,7 @@
 				7A4B0B5E29CC77E1003C3700 /* Persistence.swift in Sources */,
 				7AECEA2A29D1C09A004129AA /* Assets+SwiftUI.swift in Sources */,
 				7AECEA2F29D1C577004129AA /* LoginViewModel.swift in Sources */,
+				7AD5A1CB29DD607E00AF8D81 /* Font+Extensions.swift in Sources */,
 				7AECEA2429D1B96C004129AA /* CustomizedTextField.swift in Sources */,
 				7A4B0B9929CC8278003C3700 /* Strings.swift in Sources */,
 				7A4B0B9A29CC8278003C3700 /* XCAssets+Generated.swift in Sources */,
