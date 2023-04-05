@@ -22,7 +22,7 @@ struct BackgroundContainer<Content: View> : View {
             background
                 .ignoresSafeArea()
             content()
-        }
+        }.preferredColorScheme(.dark)
     }
     
     

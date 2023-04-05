@@ -23,3 +23,25 @@ extension Publisher where Output == String, Failure == Never {
     }
     
 }
+
+extension Publisher where Output == (String, String), Failure == Never {
+    
+    func matchPasswordMessage() -> AnyPublisher<String, Never> {
+        map { str1, str2  in
+            if !str1.isEmpty, !str2.isEmpty, str1 != str2 {
+                return L10n.Validation.passwordMatch
+            } else {
+                return ""
+            }
+        }
+        .eraseToAnyPublisher()
+    }
+    
+    func isMatch() -> AnyPublisher<Bool, Never> {
+        map { str1, str2 in
+            return str1 == str2
+        }
+        .eraseToAnyPublisher()
+    }
+
+}

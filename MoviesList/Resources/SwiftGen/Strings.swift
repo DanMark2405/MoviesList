@@ -42,6 +42,8 @@ internal enum L10n {
     internal static let nickname = L10n.tr("Localizable", "Validation.nickname", fallback: "Your nickname must contain at least 3 characters")
     /// Your password must contain at least 8 characters, numbers, at least 1 letter in uppercase and one special character!
     internal static let password = L10n.tr("Localizable", "Validation.password", fallback: "Your password must contain at least 8 characters, numbers, at least 1 letter in uppercase and one special character!")
+    /// Password don't match
+    internal static let passwordMatch = L10n.tr("Localizable", "Validation.passwordMatch", fallback: "Password don't match")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

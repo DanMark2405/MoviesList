@@ -28,8 +28,12 @@
 		7AB3CAAE29DAEA2E00248E52 /* LinearGradient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3CAAD29DAEA2E00248E52 /* LinearGradient+Extensions.swift */; };
 		7AB3CAB029DAF42500248E52 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3CAAF29DAF42500248E52 /* Image+Extension.swift */; };
 		7AB3CAB229DAFB8300248E52 /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3CAB129DAFB8300248E52 /* GradientButtonStyle.swift */; };
+		7AC1F18329DD9E8700DECEC6 /* CustomTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1F18229DD9E8700DECEC6 /* CustomTextStyle.swift */; };
+		7AC1F18529DDA04200DECEC6 /* CaptionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1F18429DDA04200DECEC6 /* CaptionButtonStyle.swift */; };
+		7AC1F18929DDA81D00DECEC6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1F18829DDA81D00DECEC6 /* SignUpView.swift */; };
+		7AC1F18B29DDA82C00DECEC6 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1F18A29DDA82C00DECEC6 /* SignUpViewModel.swift */; };
 		7ACC03F529DC456200D53748 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACC03F429DC456200D53748 /* Validation.swift */; };
-		7ACC03F729DC4C7100D53748 /* AnyPublisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACC03F629DC4C7100D53748 /* AnyPublisher+Extensions.swift */; };
+		7ACC03F729DC4C7100D53748 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACC03F629DC4C7100D53748 /* Publisher+Extensions.swift */; };
 		7ACC03F929DC513000D53748 /* AnyTransition+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACC03F829DC513000D53748 /* AnyTransition+Extensions.swift */; };
 		7AD0253F29DC1F98000A0654 /* SecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0253E29DC1F98000A0654 /* SecureTextField.swift */; };
 		7AD3123F29D43C17002B6253 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 7AD3123E29D43C17002B6253 /* Data */; };
@@ -94,8 +98,12 @@
 		7AB3CAAD29DAEA2E00248E52 /* LinearGradient+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LinearGradient+Extensions.swift"; sourceTree = "<group>"; };
 		7AB3CAAF29DAF42500248E52 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 		7AB3CAB129DAFB8300248E52 /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
+		7AC1F18229DD9E8700DECEC6 /* CustomTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextStyle.swift; sourceTree = "<group>"; };
+		7AC1F18429DDA04200DECEC6 /* CaptionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionButtonStyle.swift; sourceTree = "<group>"; };
+		7AC1F18829DDA81D00DECEC6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		7AC1F18A29DDA82C00DECEC6 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		7ACC03F429DC456200D53748 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		7ACC03F629DC4C7100D53748 /* AnyPublisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+Extensions.swift"; sourceTree = "<group>"; };
+		7ACC03F629DC4C7100D53748 /* Publisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
 		7ACC03F829DC513000D53748 /* AnyTransition+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Extensions.swift"; sourceTree = "<group>"; };
 		7AD0253E29DC1F98000A0654 /* SecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextField.swift; sourceTree = "<group>"; };
 		7AD3123B29D43AB9002B6253 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Data; sourceTree = "<group>"; };
@@ -268,6 +276,35 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		7AC1F18129DD9E6700DECEC6 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				7AB3CAB129DAFB8300248E52 /* GradientButtonStyle.swift */,
+				7AC1F18229DD9E8700DECEC6 /* CustomTextStyle.swift */,
+				7AC1F18429DDA04200DECEC6 /* CaptionButtonStyle.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		7AC1F18629DDA7B400DECEC6 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				7AC1F18729DDA7F700DECEC6 /* SignUp */,
+				7AB3CAA929DAE8E500248E52 /* SelectAvatar */,
+				7AECEA2D29D1C549004129AA /* Login */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		7AC1F18729DDA7F700DECEC6 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				7AC1F18829DDA81D00DECEC6 /* SignUpView.swift */,
+				7AC1F18A29DDA82C00DECEC6 /* SignUpViewModel.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		7ACC03F329DC450500D53748 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,7 +347,7 @@
 			children = (
 				7AE1150E29DAB6FA00DEADDC /* String+Extensions.swift */,
 				7AE1151029DABA5100DEADDC /* APIError+Localized.swift */,
-				7ACC03F629DC4C7100D53748 /* AnyPublisher+Extensions.swift */,
+				7ACC03F629DC4C7100D53748 /* Publisher+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -330,7 +367,6 @@
 			isa = PBXGroup;
 			children = (
 				7AECEA2329D1B96C004129AA /* CustomizedTextField.swift */,
-				7AB3CAB129DAFB8300248E52 /* GradientButtonStyle.swift */,
 				7AD0253E29DC1F98000A0654 /* SecureTextField.swift */,
 				7AD5A1CC29DD6D6B00AF8D81 /* BackgroundContainer.swift */,
 			);
@@ -340,6 +376,7 @@
 		7AECEA2129D1AC16004129AA /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				7AC1F18129DD9E6700DECEC6 /* Modifiers */,
 				7AB3CAAC29DAEA1900248E52 /* Extensions */,
 				7AECEA2029D1ABBC004129AA /* UIComponents */,
 			);
@@ -349,8 +386,7 @@
 		7AECEA2229D1AC2D004129AA /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				7AB3CAA929DAE8E500248E52 /* SelectAvatar */,
-				7AECEA2D29D1C549004129AA /* Login */,
+				7AC1F18629DDA7B400DECEC6 /* Authorization */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -560,22 +596,26 @@
 				7AECEA2F29D1C577004129AA /* LoginViewModel.swift in Sources */,
 				7AD5A1CB29DD607E00AF8D81 /* Font+Extensions.swift in Sources */,
 				7AECEA2429D1B96C004129AA /* CustomizedTextField.swift in Sources */,
+				7AC1F18329DD9E8700DECEC6 /* CustomTextStyle.swift in Sources */,
 				7A4B0B9929CC8278003C3700 /* Strings.swift in Sources */,
 				7A4B0B9A29CC8278003C3700 /* XCAssets+Generated.swift in Sources */,
 				7ACC03F529DC456200D53748 /* Validation.swift in Sources */,
 				7AB1671029D5BA8300AD80CA /* AppPath.swift in Sources */,
 				7AE1151129DABA5100DEADDC /* APIError+Localized.swift in Sources */,
-				7ACC03F729DC4C7100D53748 /* AnyPublisher+Extensions.swift in Sources */,
+				7AC1F18529DDA04200DECEC6 /* CaptionButtonStyle.swift in Sources */,
+				7ACC03F729DC4C7100D53748 /* Publisher+Extensions.swift in Sources */,
 				7AB3CAB229DAFB8300248E52 /* GradientButtonStyle.swift in Sources */,
 				7AD5A1CD29DD6D6B00AF8D81 /* BackgroundContainer.swift in Sources */,
 				7AB3CAAE29DAEA2E00248E52 /* LinearGradient+Extensions.swift in Sources */,
 				7ACC03F929DC513000D53748 /* AnyTransition+Extensions.swift in Sources */,
 				7AB3CAAB29DAE90800248E52 /* SelectAvatarView.swift in Sources */,
 				7A4B0B6129CC77E1003C3700 /* MoviesList.xcdatamodeld in Sources */,
+				7AC1F18B29DDA82C00DECEC6 /* SignUpViewModel.swift in Sources */,
 				7AB3CAA829DAE8DD00248E52 /* SelectAvatarViewModel.swift in Sources */,
 				7AE1150F29DAB6FA00DEADDC /* String+Extensions.swift in Sources */,
 				7AECEA2C29D1C545004129AA /* LoginView.swift in Sources */,
 				7AD0253F29DC1F98000A0654 /* SecureTextField.swift in Sources */,
+				7AC1F18929DDA81D00DECEC6 /* SignUpView.swift in Sources */,
 				7AB1670B29D5B4B700AD80CA /* RootPath.swift in Sources */,
 				7A4B0B5529CC77DF003C3700 /* MoviesListApp.swift in Sources */,
 			);
@@ -755,6 +795,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -784,6 +826,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

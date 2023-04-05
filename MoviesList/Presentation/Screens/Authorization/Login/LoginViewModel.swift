@@ -26,7 +26,7 @@ final class LoginViewModel: ObservableObject {
         setup()
     }
     
-    func setup() {
+    private func setup() {
         
         $email
             .validationMessage(.email)
@@ -44,18 +44,7 @@ final class LoginViewModel: ObservableObject {
             .assign(to: &$isEnableButton)
     }
     
-    func load() async {
-        let m = GuestAPIManager(httpClient: HTTPClientImpl())
-        let rep = AuthorizationRepositoryImpl(apiManager: m)
-        let u = LoginUseCase(authRepository: rep)
-        try? await u.run(email: "some@email.com", password: "123")
-//        let e = APIEndpoints.Login(email: "some@email.com", password: "123")
-//        do {
-//            let res = try await apiClient.request(e)
-//            print(res)
-//        } catch {
-//            print(error)
-//        }
+    func login() {
         
     }
     

@@ -12,8 +12,10 @@ struct SecureTextField: View {
     @Binding var text: String
     @Binding var promt: String
     @State private var showPassword = false
+    private let placeholder: String
     
-    init(text: Binding<String>, promt: Binding<String> = .constant("")) {
+    init(_ placeholder: String = L10n.Common.password, text: Binding<String>, promt: Binding<String> = .constant("")) {
+        self.placeholder = placeholder
         self._text = text
         self._promt = promt
     }
@@ -48,9 +50,9 @@ struct SecureTextField: View {
                 .frame(width: 20, height: 20)
             Group {
                 if showPassword {
-                    TextField(L10n.Common.password, text: $text)
+                    TextField(placeholder, text: $text)
                 } else {
-                    SecureField(L10n.Common.password, text: $text)
+                    SecureField(placeholder, text: $text)
                 }
             }  .foregroundColor(.white)
                 .font(.rubikRegular(18))
@@ -86,7 +88,7 @@ struct SecureTextField: View {
 
 struct SecureTextField_Previews: PreviewProvider {
     static var previews: some View {
-        SecureTextField(text: .constant(""), promt: .constant(""))
+        SecureTextField("Password", text: .constant(""), promt: .constant(""))
             .padding()
             .background(Color.black)
     }
