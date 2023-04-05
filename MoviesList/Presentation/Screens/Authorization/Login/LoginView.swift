@@ -11,40 +11,37 @@ struct LoginView: View {
     @ObservedObject var viewModel = LoginViewModel()
     
     var body: some View {
-        BackgroundContainer {
-            VStack(spacing: 0) {
-                icon
-                    .padding(.top)
+        BackgroundVContainer {
+            icon
+                .padding(.top)
             
-                Text("Welcome Back")
-                    .textStyle(.largeTitle)
-                    .padding(.top, 30)
+            Text("Welcome Back")
+                .textStyle(.largeTitle)
+                .padding(.top, 30)
             
-                Text("Login to your account")
-                    .textStyle(.caption)
-              
-                CustomizedTextField.email(text: $viewModel.email, promt: $viewModel.emailPromt)
-                    .padding(.horizontal, 25)
-                    .padding(.top, 32)
-                
-                SecureTextField(text: $viewModel.password, promt: $viewModel.passwordPromt)
-                    .padding(.horizontal, 25)
-                    .padding(.top)
-                
-                forgotButton
-                    .padding(.horizontal, 36)
-                
-                Spacer()
-                Button("Login", action: {})
-                    .buttonStyle(.gradient)
-                    .disabled(!viewModel.isEnableButton)
-                    .frame(width: 240, height: 55)
-                
-                signUp
-                    .frame(height: 16)
-                    .padding(.top, 14)
-                
-            }.animation(.easeInOut)
+            Text("Login to your account")
+                .textStyle(.caption)
+            
+            CustomizedTextField.email(text: $viewModel.email, promt: $viewModel.emailPromt)
+                .padding(.horizontal, 25)
+                .padding(.top, 32)
+            
+            SecureTextField(text: $viewModel.password, promt: $viewModel.passwordPromt)
+                .padding(.horizontal, 25)
+                .padding(.top)
+            
+            forgotButton
+                .padding(.horizontal, 36)
+            
+            Spacer()
+            Button("Login", action: {})
+                .buttonStyle(.gradient)
+                .disabled(!viewModel.isEnableButton)
+                .frame(width: 240, height: 55)
+            
+            signUp
+                .frame(height: 16)
+                .padding(.top, 14)
         }
     }
     

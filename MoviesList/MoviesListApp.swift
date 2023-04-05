@@ -9,11 +9,11 @@ import SwiftUI
 
 @main
 struct MoviesListApp: App {
-
+    
     var body: some Scene {
         WindowGroup {
-         SignUpView()
-             
+            SelectAvatarView()
+            
         }
     }
 }

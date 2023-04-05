@@ -32,6 +32,11 @@
 		7AC1F18529DDA04200DECEC6 /* CaptionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1F18429DDA04200DECEC6 /* CaptionButtonStyle.swift */; };
 		7AC1F18929DDA81D00DECEC6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1F18829DDA81D00DECEC6 /* SignUpView.swift */; };
 		7AC1F18B29DDA82C00DECEC6 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1F18A29DDA82C00DECEC6 /* SignUpViewModel.swift */; };
+		7AC1F18E29DDBC6100DECEC6 /* NewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1F18D29DDBC6100DECEC6 /* NewPasswordView.swift */; };
+		7AC1F19029DDBC7100DECEC6 /* NewPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1F18F29DDBC7100DECEC6 /* NewPasswordViewModel.swift */; };
+		7AC1F19329DDC15200DECEC6 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1F19229DDC15200DECEC6 /* ResetPasswordView.swift */; };
+		7AC1F19529DDC17C00DECEC6 /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1F19429DDC17C00DECEC6 /* ResetPasswordViewModel.swift */; };
+		7AC1F19729DDC69100DECEC6 /* IconButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1F19629DDC69100DECEC6 /* IconButtonStyle.swift */; };
 		7ACC03F529DC456200D53748 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACC03F429DC456200D53748 /* Validation.swift */; };
 		7ACC03F729DC4C7100D53748 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACC03F629DC4C7100D53748 /* Publisher+Extensions.swift */; };
 		7ACC03F929DC513000D53748 /* AnyTransition+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACC03F829DC513000D53748 /* AnyTransition+Extensions.swift */; };
@@ -46,7 +51,7 @@
 		7AD5A1C529DD5EDA00AF8D81 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AD5A1B729DD5EDA00AF8D81 /* Rubik-Black.ttf */; };
 		7AD5A1C729DD5EDA00AF8D81 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AD5A1B929DD5EDA00AF8D81 /* Rubik-Regular.ttf */; };
 		7AD5A1CB29DD607E00AF8D81 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD5A1CA29DD607E00AF8D81 /* Font+Extensions.swift */; };
-		7AD5A1CD29DD6D6B00AF8D81 /* BackgroundContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD5A1CC29DD6D6B00AF8D81 /* BackgroundContainer.swift */; };
+		7AD5A1CD29DD6D6B00AF8D81 /* BackgroundVContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD5A1CC29DD6D6B00AF8D81 /* BackgroundVContainer.swift */; };
 		7AE1150F29DAB6FA00DEADDC /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1150E29DAB6FA00DEADDC /* String+Extensions.swift */; };
 		7AE1151129DABA5100DEADDC /* APIError+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1151029DABA5100DEADDC /* APIError+Localized.swift */; };
 		7AECEA2429D1B96C004129AA /* CustomizedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AECEA2329D1B96C004129AA /* CustomizedTextField.swift */; };
@@ -102,6 +107,11 @@
 		7AC1F18429DDA04200DECEC6 /* CaptionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionButtonStyle.swift; sourceTree = "<group>"; };
 		7AC1F18829DDA81D00DECEC6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		7AC1F18A29DDA82C00DECEC6 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		7AC1F18D29DDBC6100DECEC6 /* NewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordView.swift; sourceTree = "<group>"; };
+		7AC1F18F29DDBC7100DECEC6 /* NewPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewModel.swift; sourceTree = "<group>"; };
+		7AC1F19229DDC15200DECEC6 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		7AC1F19429DDC17C00DECEC6 /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
+		7AC1F19629DDC69100DECEC6 /* IconButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtonStyle.swift; sourceTree = "<group>"; };
 		7ACC03F429DC456200D53748 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		7ACC03F629DC4C7100D53748 /* Publisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
 		7ACC03F829DC513000D53748 /* AnyTransition+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Extensions.swift"; sourceTree = "<group>"; };
@@ -115,7 +125,7 @@
 		7AD5A1B729DD5EDA00AF8D81 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
 		7AD5A1B929DD5EDA00AF8D81 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		7AD5A1CA29DD607E00AF8D81 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
-		7AD5A1CC29DD6D6B00AF8D81 /* BackgroundContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundContainer.swift; sourceTree = "<group>"; };
+		7AD5A1CC29DD6D6B00AF8D81 /* BackgroundVContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundVContainer.swift; sourceTree = "<group>"; };
 		7AD6FD5C29D729F700080966 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7AE1150E29DAB6FA00DEADDC /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		7AE1151029DABA5100DEADDC /* APIError+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIError+Localized.swift"; sourceTree = "<group>"; };
@@ -282,6 +292,7 @@
 				7AB3CAB129DAFB8300248E52 /* GradientButtonStyle.swift */,
 				7AC1F18229DD9E8700DECEC6 /* CustomTextStyle.swift */,
 				7AC1F18429DDA04200DECEC6 /* CaptionButtonStyle.swift */,
+				7AC1F19629DDC69100DECEC6 /* IconButtonStyle.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -289,6 +300,8 @@
 		7AC1F18629DDA7B400DECEC6 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				7AC1F19129DDC11300DECEC6 /* ResetPassword */,
+				7AC1F18C29DDBC4900DECEC6 /* NewPassword */,
 				7AC1F18729DDA7F700DECEC6 /* SignUp */,
 				7AB3CAA929DAE8E500248E52 /* SelectAvatar */,
 				7AECEA2D29D1C549004129AA /* Login */,
@@ -303,6 +316,24 @@
 				7AC1F18A29DDA82C00DECEC6 /* SignUpViewModel.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		7AC1F18C29DDBC4900DECEC6 /* NewPassword */ = {
+			isa = PBXGroup;
+			children = (
+				7AC1F18D29DDBC6100DECEC6 /* NewPasswordView.swift */,
+				7AC1F18F29DDBC7100DECEC6 /* NewPasswordViewModel.swift */,
+			);
+			path = NewPassword;
+			sourceTree = "<group>";
+		};
+		7AC1F19129DDC11300DECEC6 /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				7AC1F19229DDC15200DECEC6 /* ResetPasswordView.swift */,
+				7AC1F19429DDC17C00DECEC6 /* ResetPasswordViewModel.swift */,
+			);
+			path = ResetPassword;
 			sourceTree = "<group>";
 		};
 		7ACC03F329DC450500D53748 /* Utils */ = {
@@ -368,7 +399,7 @@
 			children = (
 				7AECEA2329D1B96C004129AA /* CustomizedTextField.swift */,
 				7AD0253E29DC1F98000A0654 /* SecureTextField.swift */,
-				7AD5A1CC29DD6D6B00AF8D81 /* BackgroundContainer.swift */,
+				7AD5A1CC29DD6D6B00AF8D81 /* BackgroundVContainer.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -595,6 +626,7 @@
 				7AECEA2A29D1C09A004129AA /* Assets+SwiftUI.swift in Sources */,
 				7AECEA2F29D1C577004129AA /* LoginViewModel.swift in Sources */,
 				7AD5A1CB29DD607E00AF8D81 /* Font+Extensions.swift in Sources */,
+				7AC1F19529DDC17C00DECEC6 /* ResetPasswordViewModel.swift in Sources */,
 				7AECEA2429D1B96C004129AA /* CustomizedTextField.swift in Sources */,
 				7AC1F18329DD9E8700DECEC6 /* CustomTextStyle.swift in Sources */,
 				7A4B0B9929CC8278003C3700 /* Strings.swift in Sources */,
@@ -602,10 +634,12 @@
 				7ACC03F529DC456200D53748 /* Validation.swift in Sources */,
 				7AB1671029D5BA8300AD80CA /* AppPath.swift in Sources */,
 				7AE1151129DABA5100DEADDC /* APIError+Localized.swift in Sources */,
+				7AC1F18E29DDBC6100DECEC6 /* NewPasswordView.swift in Sources */,
 				7AC1F18529DDA04200DECEC6 /* CaptionButtonStyle.swift in Sources */,
 				7ACC03F729DC4C7100D53748 /* Publisher+Extensions.swift in Sources */,
+				7AC1F19729DDC69100DECEC6 /* IconButtonStyle.swift in Sources */,
 				7AB3CAB229DAFB8300248E52 /* GradientButtonStyle.swift in Sources */,
-				7AD5A1CD29DD6D6B00AF8D81 /* BackgroundContainer.swift in Sources */,
+				7AD5A1CD29DD6D6B00AF8D81 /* BackgroundVContainer.swift in Sources */,
 				7AB3CAAE29DAEA2E00248E52 /* LinearGradient+Extensions.swift in Sources */,
 				7ACC03F929DC513000D53748 /* AnyTransition+Extensions.swift in Sources */,
 				7AB3CAAB29DAE90800248E52 /* SelectAvatarView.swift in Sources */,
@@ -614,9 +648,11 @@
 				7AB3CAA829DAE8DD00248E52 /* SelectAvatarViewModel.swift in Sources */,
 				7AE1150F29DAB6FA00DEADDC /* String+Extensions.swift in Sources */,
 				7AECEA2C29D1C545004129AA /* LoginView.swift in Sources */,
+				7AC1F19329DDC15200DECEC6 /* ResetPasswordView.swift in Sources */,
 				7AD0253F29DC1F98000A0654 /* SecureTextField.swift in Sources */,
 				7AC1F18929DDA81D00DECEC6 /* SignUpView.swift in Sources */,
 				7AB1670B29D5B4B700AD80CA /* RootPath.swift in Sources */,
+				7AC1F19029DDBC7100DECEC6 /* NewPasswordViewModel.swift in Sources */,
 				7A4B0B5529CC77DF003C3700 /* MoviesListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

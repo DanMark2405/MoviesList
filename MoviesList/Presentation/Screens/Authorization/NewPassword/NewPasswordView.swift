@@ -1,5 +1,5 @@
 //
-//  SignUpView.swift
+//  NewPasswordView.swift
 //  MoviesList
 //
 //  Created by Daniil Markish on 05/04/2023.
@@ -7,26 +7,20 @@
 
 import SwiftUI
 
-struct SignUpView: View {
-    @ObservedObject var viewModel: SignUpViewModel = SignUpViewModel()
+struct NewPasswordView: View {
+    @ObservedObject var viewModel: NewPasswordViewModel = NewPasswordViewModel()
+    
     var body: some View {
-        BackgroundVContainer {
-            
+        BackgroundVContainer(spacing: 16) {
             Spacer()
-            Text("Register")
-                .textStyle(.largeTitle)
-                .padding(.top, 30)
+            Text("Create new \npassword")
+                .textStyle(.title)
             
-            Text("Create your account")
+            Asset.Images.newPassword.swiftUIImage
+            
+            Text("Your new password must be different from previous used passwords")
                 .textStyle(.caption)
-            
-            CustomizedTextField.nickname(text: $viewModel.nickname, promt: $viewModel.nicknamePromt)
-                .padding(.horizontal, 25)
-                .padding(.top, 32)
-            
-            CustomizedTextField.email(text: $viewModel.email, promt: $viewModel.emailPromt)
-                .padding(.horizontal, 25)
-                .padding(.top)
+                .multilineTextAlignment(.center)
             
             SecureTextField(text: $viewModel.password, promt: $viewModel.passwordPromt)
                 .padding(.horizontal, 25)
@@ -47,8 +41,8 @@ struct SignUpView: View {
     }
 }
 
-struct SignUpView_Previews: PreviewProvider {
+struct NewPasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView()
+        NewPasswordView()
     }
 }

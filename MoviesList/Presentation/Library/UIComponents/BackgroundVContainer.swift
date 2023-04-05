@@ -7,21 +7,26 @@
 
 import SwiftUI
 
-struct BackgroundContainer<Content: View> : View {
+struct BackgroundVContainer<Content: View> : View {
     
     private let content: () -> Content
     private let background: Color
+    private let spacing: CGFloat
     
-    init(background: Color = Asset.Colors.backgroundColor.swiftUIColor, @ViewBuilder content: @escaping () -> Content) {
+    init(spacing: CGFloat = 0, background: Color = Asset.Colors.backgroundColor.swiftUIColor, @ViewBuilder content: @escaping () -> Content) {
         self.content = content
         self.background = background
+        self.spacing = spacing
     }
     
     var body: some View {
         ZStack {
             background
                 .ignoresSafeArea()
-            content()
+            VStack(spacing: spacing) {
+                content()
+            }
+            .animation(.easeInOut)
         }.preferredColorScheme(.dark)
     }
     

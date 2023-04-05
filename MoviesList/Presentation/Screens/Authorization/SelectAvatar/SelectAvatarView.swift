@@ -13,47 +13,61 @@ struct SelectAvatarView: View {
     @ObservedObject var viewModel = SelectAvatarViewModel()
     
     var body: some View {
-        VStack {
+        BackgroundVContainer(spacing: 16) {
             Spacer()
+            
+            Text("Set a photo for your profile")
+                .textStyle(.title)
+                .padding(.horizontal, 50)
             
             viewModel.image
                 .resizable()
-                .frame(width: 200, height: 200)
+                .frame(width: 270, height: 270)
                 .clipShape(Circle())
                 .overlay {
-                    Circle()
-                        .stroke(LinearGradient.purpleBlueVertical, lineWidth: 5)
-                        .frame(width: 200)
+                    picker
+                        .offset(y: -135)
+                        .rotationEffect(.degrees(140))
                 }
                 .overlay {
-                    picker
-                        .offset(y: -100)
-                        .rotationEffect(.degrees(120))
+                    Button(action: { viewModel.deleteImage() }) {
+                        Asset.Images.lock.swiftUIImage
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 20)
+                            .frame(width: 40, height: 40)
+                    }
+                    .buttonStyle(.icon)
+                    .disabled(!viewModel.showDeleteButton)
+                    .opacity(viewModel.showDeleteButton ? 1 : 0)
+                    .rotationEffect(.degrees(140))
+                    .offset(y: -135)
+                    .rotationEffect(.degrees(-140))
                 }
+                
             
-            Button("Help", action: {}) 
+                Spacer()
+            Button("Continue", action: {})
                 .buttonStyle(.gradient)
-                .padding(.horizontal, 50)
-        
-            Spacer()
+                .frame(width: 240, height: 55)
+                .padding(.bottom, 30)
+
         }
-        
-     
     }
     
     var picker: some View {
         PhotosPicker(selection: $viewModel.selectedItem, matching: .images) {
-                Circle()
-                    .fill(LinearGradient.purpleBlueVertical)
-                    .frame(width: 30)
-                    .overlay {
-                        Image(systemName: "pencil")
-                            .foregroundColor(.white)
-                            .bold()
-                    }
-                    .rotationEffect(.degrees(-120))
-            
-        }
+            RoundedRectangle(cornerRadius: 15)
+                .fill(Asset.Colors.iconBG.swiftUIColor)
+                .frame(width: 40, height: 40)
+                .overlay {
+                    Image(systemName: "pencil")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 20)
+                        .foregroundStyle(LinearGradient.purpleBlueVertical)
+                }
+        }.rotationEffect(.degrees(-140))
     }
 }
 

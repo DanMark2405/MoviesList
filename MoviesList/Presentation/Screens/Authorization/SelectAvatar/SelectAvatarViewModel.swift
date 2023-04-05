@@ -10,8 +10,10 @@ import PhotosUI
 import Combine
 
 class SelectAvatarViewModel: ObservableObject {
+    
     @Published var selectedItem: PhotosPickerItem? = nil
-    @Published var image: Image = Image(systemName: "person")
+    @Published var image: Image = Asset.Images.avatar.swiftUIImage
+    @Published var showDeleteButton = false
     
     private var cancellable = Set<AnyCancellable>()
     
@@ -22,10 +24,21 @@ class SelectAvatarViewModel: ObservableObject {
     private func setup() {
         $selectedItem
             .sink { [weak self] _ in
-            self?.loadImage()
-        }
-        .store(in: &cancellable)
+                self?.loadImage()
+            }
+            .store(in: &cancellable)
         
+        $selectedItem
+            .map { item in
+                return item != nil
+            }
+            .assign(to: &$showDeleteButton)
+        
+    }
+    
+    func deleteImage() {
+        selectedItem = nil
+        image = Asset.Images.avatar.swiftUIImage
     }
     
     private func loadImage() {

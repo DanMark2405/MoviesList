@@ -9,6 +9,7 @@ import SwiftUI
 
 enum CustomViewStyle {
     case largeTitle
+    case title
     case caption
     case caption2
 }
@@ -20,14 +21,21 @@ extension View {
             self
                 .font(.rubikSemiBold(35))
                 .foregroundStyle(LinearGradient.bluePurpleHorizontal)
+                .multilineTextAlignment(.center)
         case .caption:
             self
                 .font(.rubikMedium())
                 .foregroundColor(Asset.Colors.textGray.swiftUIColor)
+                .multilineTextAlignment(.center)
         case .caption2:
             self
                 .font(.rubikMedium(12))
                 .foregroundColor(Asset.Colors.textGray.swiftUIColor)
+        case .title:
+            self
+                .font(.rubikSemiBold(25))
+                .foregroundStyle(LinearGradient.bluePurpleHorizontal)
+                .multilineTextAlignment(.center)
         }
     }
 }
