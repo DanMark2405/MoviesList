@@ -5,12 +5,8 @@
 //  Created by Daniil Markish on 27/03/2023.
 //
 
-import Foundation
-import SwiftUI
 import Domain
-import Data
 import Combine
-import UIKit
 
 final class LoginViewModel: ObservableObject {
     
@@ -22,7 +18,10 @@ final class LoginViewModel: ObservableObject {
     
     @Published var isEnableButton = false
     
-    init() {
+    private let useCase: LoginUseCase
+    
+    init(useCase: LoginUseCase) {
+        self.useCase = useCase
         setup()
     }
     

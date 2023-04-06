@@ -12,7 +12,7 @@ struct MoviesListApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SelectAvatarView()
+            FavoriteGenreView()
             
         }
     }

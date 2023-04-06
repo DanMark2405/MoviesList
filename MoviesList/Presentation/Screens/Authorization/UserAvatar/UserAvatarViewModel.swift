@@ -9,7 +9,7 @@ import SwiftUI
 import PhotosUI
 import Combine
 
-class SelectAvatarViewModel: ObservableObject {
+class UserAvatarViewModel: ObservableObject {
     
     @Published var selectedItem: PhotosPickerItem? = nil
     @Published var image: Image = Asset.Images.avatar.swiftUIImage

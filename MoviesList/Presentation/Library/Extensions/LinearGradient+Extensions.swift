@@ -13,4 +13,8 @@ extension LinearGradient {
     static let purpleBlueVertical = LinearGradient(colors: [Asset.Colors.mainBlue.uiColor, Asset.Colors.mainPurple.uiColor], startPoint: .top, endPoint: .bottom)
     static let bluePurpleDiagonal = LinearGradient(colors: [Asset.Colors.mainBlue.uiColor, Asset.Colors.mainPurple.uiColor], startPoint: .topLeading, endPoint: .bottomTrailing)
     static let gray =  LinearGradient(colors: [.gray], startPoint: .leading, endPoint: .trailing)
+    
+    static func forColor(_ color: Color) -> LinearGradient {
+        LinearGradient(colors: [color], startPoint: .top, endPoint: .bottom)
+    }
 }

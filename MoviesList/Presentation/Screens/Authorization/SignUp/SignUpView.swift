@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @ObservedObject var viewModel: SignUpViewModel = SignUpViewModel()
+    @ObservedObject var viewModel: SignUpViewModel
     var body: some View {
         BackgroundVContainer {
             

@@ -8,9 +8,9 @@
 import SwiftUI
 import PhotosUI
 
-struct SelectAvatarView: View {
+struct UserAvatarView: View {
     
-    @ObservedObject var viewModel = SelectAvatarViewModel()
+    @ObservedObject var viewModel = UserAvatarViewModel()
     
     var body: some View {
         BackgroundVContainer(spacing: 16) {
@@ -73,6 +73,6 @@ struct SelectAvatarView: View {
 
 struct SelectAvatarView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectAvatarView()
+        UserAvatarView()
     }
 }
