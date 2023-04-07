@@ -17,6 +17,10 @@ final class UseCasesDI {
         .init(authRepository: authorizationRepository, authDataRepository: authDataRepository)
     }
     
+    var register: RegisterUseCase {
+        .init(authRepository: authorizationRepository)
+    }
+    
     // MARK: - Repositories
     
     private var authDataRepository: AuthDataRepository {

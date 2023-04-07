@@ -9,7 +9,7 @@ import Foundation
 import Domain
 
 public final class AuthorizationRepositoryImpl: AuthorizationRepository {
-  
+
     private let apiManager: APIManager
     
     public init(apiManager: APIManager) {
@@ -17,6 +17,10 @@ public final class AuthorizationRepositoryImpl: AuthorizationRepository {
     }
     
     public func login(email: String, password: String) async throws -> UserModel {
-        try await apiManager.request(APIEndpoints.Login(email: email, password: password)).toModel
+        try await apiManager.request(APIEndpoints.Login(model: .init(email: email, password: password))).toDomain
+    }
+    
+    public func register(model: AuthModel) async throws {
+        try await apiManager.request(APIEndpoints.Registration(model: .fromDomain(model)))
     }
 }

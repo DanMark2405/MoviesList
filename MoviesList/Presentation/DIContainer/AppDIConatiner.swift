@@ -12,8 +12,8 @@ final class AppDIContainer {
     
     private let useCasesDI: UseCasesDI
     
-    private(set) lazy var appCoordinator: AppCoordinator = {
-        AppCoordinator(appDI: self)
+    private(set) lazy var appCoordinator: AppCoordinatorImpl = {
+        AppCoordinatorImpl(appDI: self)
     }()
     
     init() {

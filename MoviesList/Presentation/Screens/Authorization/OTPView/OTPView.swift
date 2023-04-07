@@ -13,8 +13,12 @@ struct OTPView: View {
     
     var body: some View {
         BackgroundVContainer {
+            Spacer()
+            
+            Asset.Images.otp.swiftUIImage
             
             Spacer()
+    
             Button("Register", action: {})
                 .buttonStyle(.gradient)
                 .disabled(!viewModel.isEnbledButton)
@@ -24,8 +28,8 @@ struct OTPView: View {
     }
 }
 
-//struct OTPView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        OTPView()
-//    }
-//}
+struct OTPView_Previews: PreviewProvider {
+    static var previews: some View {
+        AppDIContainer().authorizationDI.makeOTPView()
+    }
+}

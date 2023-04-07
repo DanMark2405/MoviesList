@@ -38,6 +38,7 @@ struct NewPasswordView: View {
                 .frame(width: 240, height: 55)
                 .padding(.bottom, 30)
         }
+        .animation(.easeInOut, value: [viewModel.passwordPromt, viewModel.repeatPasswordPromt])
     }
 }
 

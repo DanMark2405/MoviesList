@@ -35,7 +35,9 @@ struct LoginView: View {
                     .padding(.horizontal, 36)
                 
                 Spacer()
-                Button("Login", action: { viewModel.login() })
+                Button("Login", action: {
+                    viewModel.loginAction()
+                })
                     .buttonStyle(.gradient)
                     .disabled(!viewModel.isEnabledButton)
                     .frame(width: 240, height: 55)
@@ -44,7 +46,8 @@ struct LoginView: View {
                     .frame(height: 16)
                     .padding(.top, 14)
             }
-            .animation(.easeInOut, value: [viewModel.emailPromt, viewModel.passwordPromt])
+            .animation(.easeInOut, value:
+                        [viewModel.emailPromt, viewModel.passwordPromt])
         }
     }
     
@@ -61,7 +64,7 @@ struct LoginView: View {
     var forgotButton: some View {
         HStack {
             Button("Forgot your password", action: {
-                viewModel.forgotPasswordAction()
+                viewModel.loginAction()
             })
                 .buttonStyle(.caption)
             Spacer()
@@ -74,7 +77,7 @@ struct LoginView: View {
                 .textStyle(.caption2)
             
             Button("Sign up", action: {
-                viewModel.signUp()
+                viewModel.signUpAction()
             })
                 .buttonStyle(.caption)
         }

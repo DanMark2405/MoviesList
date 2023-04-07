@@ -7,8 +7,11 @@
 
 import Foundation
 import Combine
+import Domain
 
 final class SignUpViewModel: ObservableObject {
+    
+    // MARK: - Properties
     
     @Published var email = ""
     @Published var emailPromt = "res"
@@ -24,9 +27,27 @@ final class SignUpViewModel: ObservableObject {
     
     @Published var isEnabledButton = false
     
-    init() {
+    private let useCase: RegisterUseCase
+    private let appCoordinator: AppCoordinator
+    
+    // MARK: - Init
+    
+    init(useCase: RegisterUseCase, appCoordinator: AppCoordinator) {
+        self.useCase = useCase
+        self.appCoordinator = appCoordinator
         setup()
     }
+    
+    // MARK: - Actions
+    
+    func registerAction() {
+        let model = AuthModel(nickname: nickname, email: email, password: password)
+        Task {
+            try? await useCase.run(model: model)
+        }
+    }
+    
+    // MARK: - Private
     
     private func setup() {
         

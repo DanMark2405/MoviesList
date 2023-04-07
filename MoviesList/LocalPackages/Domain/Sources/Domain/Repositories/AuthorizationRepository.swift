@@ -9,4 +9,5 @@ import Foundation
 
 public protocol AuthorizationRepository {
     func login(email: String, password: String) async throws -> UserModel
+    func register(model: AuthModel) async throws
 }

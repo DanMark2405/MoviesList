@@ -20,39 +20,42 @@ struct UserAvatarView: View {
                 .textStyle(.title)
                 .padding(.horizontal, 50)
             
-            viewModel.image
-                .resizable()
-                .frame(width: 270, height: 270)
-                .clipShape(Circle())
-                .overlay {
-                    picker
-                        .offset(y: -135)
-                        .rotationEffect(.degrees(140))
-                }
-                .overlay {
-                    Button(action: { viewModel.deleteImage() }) {
-                        Asset.Images.lock.swiftUIImage
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(height: 20)
-                            .frame(width: 40, height: 40)
-                    }
-                    .buttonStyle(.icon)
-                    .disabled(!viewModel.showDeleteButton)
-                    .opacity(viewModel.showDeleteButton ? 1 : 0)
-                    .rotationEffect(.degrees(140))
-                    .offset(y: -135)
-                    .rotationEffect(.degrees(-140))
-                }
-                
+            avatar
             
-                Spacer()
+            Spacer()
             Button("Continue", action: {})
                 .buttonStyle(.gradient)
                 .frame(width: 240, height: 55)
                 .padding(.bottom, 30)
-
+            
         }
+    }
+    
+    var avatar: some View {
+        viewModel.image
+            .resizable()
+            .frame(width: 270, height: 270)
+            .clipShape(Circle())
+            .overlay {
+                picker
+                    .offset(y: -135)
+                    .rotationEffect(.degrees(140))
+            }
+            .overlay {
+                Button(action: { viewModel.deleteImage() }) {
+                    Asset.Images.lock.swiftUIImage
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 20)
+                        .frame(width: 40, height: 40)
+                }
+                .buttonStyle(.icon)
+                .disabled(!viewModel.showDeleteButton)
+                .opacity(viewModel.showDeleteButton ? 1 : 0)
+                .rotationEffect(.degrees(140))
+                .offset(y: -135)
+                .rotationEffect(.degrees(-140))
+            }
     }
     
     var picker: some View {

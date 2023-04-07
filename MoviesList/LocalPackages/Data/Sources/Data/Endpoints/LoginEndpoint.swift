@@ -14,13 +14,13 @@ extension APIEndpoints {
         
         var body: Encodable?
         
-        typealias ResultType = Response
+        typealias ResultType = LoginDTO
         
         let path = "/auth/log-in"
         let method: HTTPRequestMethod = .post
         
-        init(email: String, password: String) {
-            body = Request(email: email, password: password)
+        init(model: Request) {
+            self.body = model
         }
         
         struct Request: Encodable {
@@ -28,13 +28,7 @@ extension APIEndpoints {
             let password: String
         }
         
-        struct Response: Decodable {
-            let token: String
-            let nickname: String
-            let firstname: String
-            let surname: String
-            let email: String
-        }
+
         
         struct Data {
             let error: String
@@ -43,12 +37,4 @@ extension APIEndpoints {
     }
 }
 
-extension APIEndpoints.Login.Response {
-    var toModel: UserModel {
-        .init(token: token,
-              nickname: nickname,
-              firstname: firstname,
-              surname: surname,
-              email: email)
-    }
-}
+

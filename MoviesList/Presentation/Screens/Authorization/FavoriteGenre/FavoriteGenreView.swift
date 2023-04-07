@@ -21,29 +21,8 @@ struct FavoriteGenreView: View {
             
             Spacer()
             
-            TagFlowLayout(spacing: 12) {
-                ForEach(viewModel.genres, id: \.self) { genre in
-                    Button(action: {
-                        viewModel.selectGenre(genre)
-                    }) {
-                        Text(genre)
-                            .font(.rubikRegular(14))
-                            .foregroundColor(.white)
-                            .padding(.horizontal, 25)
-                            .frame(height: 35)
-                            .background(
-                                RoundedRectangle(cornerRadius: .infinity)
-                                    .fill(
-                                        viewModel.isSelected(genre) ?
-                                        LinearGradient.bluePurpleHorizontal
-                                        : LinearGradient.forColor(Asset.Colors.iconBG.swiftUIColor)
-                                    )
-                            )
-                            .animation(.easeInOut(duration: 1), value: viewModel.selectedGenres)
-                    }
-                }
-            }
-            .padding(.horizontal, 30)
+            tagView
+                .padding(.horizontal, 30)
             
             Spacer()
             Button("Register", action: {})
@@ -53,7 +32,34 @@ struct FavoriteGenreView: View {
                 .padding(.bottom, 30)
         }
     }
+    
+    var tagView: some View {
+        TagFlowLayout(spacing: 12) {
+            ForEach(viewModel.genres, id: \.self) { genre in
+                Button(action: {
+                    viewModel.selectGenre(genre)
+                }) {
+                    Text(genre)
+                        .font(.rubikRegular(14))
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 25)
+                        .frame(height: 35)
+                        .background(
+                            RoundedRectangle(cornerRadius: .infinity)
+                                .fill(
+                                    viewModel.isSelected(genre) ?
+                                    LinearGradient.bluePurpleHorizontal
+                                    : LinearGradient.forColor(Asset.Colors.iconBG.swiftUIColor)
+                                )
+                        )
+                        .animation(.easeInOut(duration: 1), value: viewModel.selectedGenres)
+                }
+            }
+        }
+    }
 }
+
+
 
 struct FavoriteGenreView_Previews: PreviewProvider {
     static var previews: some View {

@@ -38,12 +38,17 @@ struct SignUpView: View {
             
             
             Spacer()
-            Button("Register", action: {})
+            Button("Register", action: {
+                viewModel.registerAction()
+            })
                 .buttonStyle(.gradient)
                 .disabled(!viewModel.isEnabledButton)
                 .frame(width: 240, height: 55)
                 .padding(.bottom, 30)
         }
+        .animation(.easeInOut, value: [
+            viewModel.emailPromt, viewModel.passwordPromt, viewModel.nicknamePromt, viewModel.repeatPasswordPromt
+        ])
     }
 }
 

@@ -58,7 +58,7 @@ struct CustomizedTextField: View {
     
     var promtView: some View  {
         Text(promt)
-            .foregroundColor(Asset.Colors.errorColor.swiftUIColor)
+            .foregroundColor(Asset.Colors.mainPurple.swiftUIColor)
             .font(.rubikSemiBold(10))
             .multilineTextAlignment(.center)
             .lineLimit(2)
@@ -69,7 +69,7 @@ struct CustomizedTextField: View {
             image
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .foregroundStyle(LinearGradient.bluePurpleHorizontal)
+                .foregroundColor(Asset.Colors.mainBlue.swiftUIColor)
                 .frame(width: 20, height: 20)
                 .padding(.trailing, 16)
             
@@ -92,7 +92,7 @@ struct CustomizedTextField: View {
 
 struct TextFieldView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomizedTextField(text: .constant(""), promt: .constant(""), placeholder: "Email", image: Asset.Images.appIcon.swiftUIImage, keyboardType: .emailAddress)
+        CustomizedTextField(text: .constant(""), promt: .constant(""), placeholder: "Email", image: Asset.Images.email.swiftUIImage, keyboardType: .emailAddress)
             .padding()
             .background(Color.black)
     }

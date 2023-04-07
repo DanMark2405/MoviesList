@@ -8,8 +8,14 @@
 import Foundation
 import SwiftUI
 
-class AppCoordinator: ObservableObject {
-    @Published var rootView: RootViewType
+public protocol AppCoordinator {
+    func coordinate(to path: AppPath)
+    func back()
+}
+
+class AppCoordinatorImpl: ObservableObject {
+
+    @Published var rootView: RootPath
     @Published var authPath = [AuthorizationPath]()
     
     private let appDI: AppDIContainer
@@ -19,7 +25,7 @@ class AppCoordinator: ObservableObject {
         rootView = .login
     }
     
-    @ViewBuilder func rootView(_ type: RootViewType) -> some View {
+    @ViewBuilder func rootView(_ type: RootPath) -> some View {
         switch type {
         case .login:
             appDI.authorizationDI.makeLoginView()
@@ -45,14 +51,31 @@ class AppCoordinator: ObservableObject {
         }
     }
     
-    public func authNavigate(to path: AuthorizationPath) {
-        self.authPath.append(path)
+
+    
+}
+
+ //MARK: - Implementation AppCoordinator
+
+extension AppCoordinatorImpl: AppCoordinator {
+    public func coordinate(to path: AppPath) {
+        switch path {
+        case let path as AuthorizationPath:
+            authPath.append(path)
+        case let path as RootPath:
+            rootView = path
+        default: break
+        }
     }
     
-    public func changeRootView(to type: RootViewType) {
-        self.rootView = type
+    public func back() {
+        switch rootView {
+        case .login:
+            authPath.removeLast()
+        case .tabBar:
+            authPath.removeLast()
+        }
     }
-    
 }
 
 

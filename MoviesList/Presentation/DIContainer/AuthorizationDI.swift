@@ -29,7 +29,8 @@ final class AuthorizationDI {
     }
     
     public func makeSignUpView() -> SignUpView {
-        let viewModel = SignUpViewModel()
+        let useCase = useCasesDI.register
+        let viewModel = SignUpViewModel(useCase: useCase, appCoordinator: appCoordinator)
         let view = SignUpView(viewModel: viewModel)
         return view
     }

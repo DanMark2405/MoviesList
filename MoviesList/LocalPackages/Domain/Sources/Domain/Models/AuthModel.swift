@@ -8,8 +8,15 @@
 import Foundation
 
 public struct AuthModel {
-    let nickname: String
-    let email: String
-    let password: String
-    var verificationCode: String?
+    public let nickname: String
+    public let email: String
+    public let password: String
+    public let verificationCode: String?
+    
+    public init(nickname: String, email: String, password: String, verificationCode: String? = nil) {
+        self.nickname = nickname
+        self.email = email
+        self.password = password
+        self.verificationCode = verificationCode
+    }
 }

@@ -10,6 +10,8 @@ import Combine
 
 final class LoginViewModel: ObservableObject {
     
+    // MARK: - Properties
+    
     @Published var email = ""
     @Published var emailPromt = "res"
     
@@ -21,11 +23,36 @@ final class LoginViewModel: ObservableObject {
     private let useCase: LoginUseCase
     private let appCoordinator: AppCoordinator
     
+    // MARK: - Init
+    
     init(useCase: LoginUseCase, appCoordinator: AppCoordinator) {
         self.useCase = useCase
         self.appCoordinator = appCoordinator
         setup()
     }
+    
+    // MARK: - Actions
+    
+    func forgotPasswordAction() {
+        appCoordinator.coordinate(to: AuthorizationPath.forgotPassword)
+    }
+    
+    func signUpAction() {
+        appCoordinator.coordinate(to: AuthorizationPath.signUp)
+    }
+    
+    func loginAction() {
+        Task {
+            do {
+                let user = try await useCase.run(email: "some@email.com", password: "123")
+                appCoordinator.coordinate(to: RootPath.tabBar)
+            } catch {
+                
+            }
+        }
+    }
+    
+    // MARK: - Private
     
     private func setup() {
         
@@ -44,18 +71,7 @@ final class LoginViewModel: ObservableObject {
             }
             .assign(to: &$isEnabledButton)
     }
-    
-    func forgotPasswordAction() {
-        appCoordinator.authNavigate(to: .forgotPassword)
-    }
-    
-    func signUp() {
-        appCoordinator.authNavigate(to: .signUp)
-    }
-    
-    func login() {
-        appCoordinator.changeRootView(to: .tabBar)
-    }
+
     
 }
 

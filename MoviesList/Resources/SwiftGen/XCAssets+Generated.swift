@@ -43,6 +43,7 @@ internal enum Asset {
     internal static let eyeSlash = ImageAsset(name: "eyeSlash")
     internal static let lock = ImageAsset(name: "lock")
     internal static let newPassword = ImageAsset(name: "newPassword")
+    internal static let otp = ImageAsset(name: "otp")
     internal static let person = ImageAsset(name: "person")
     internal static let resetPassword = ImageAsset(name: "resetPassword")
   }

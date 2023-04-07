@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RootView: View {
-    @StateObject var coordinator: AppCoordinator
+    @StateObject var coordinator: AppCoordinatorImpl
     var body: some View {
         switch coordinator.rootView {
         case .login:

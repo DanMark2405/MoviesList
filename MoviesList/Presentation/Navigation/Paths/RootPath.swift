@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum RootViewType: AppPath {
+enum RootPath: AppPath {
     case login
     case tabBar
 }

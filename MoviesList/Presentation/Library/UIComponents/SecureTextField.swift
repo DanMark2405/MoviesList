@@ -45,10 +45,30 @@ struct SecureTextField: View {
     
     var promtView: some View  {
         Text(promt)
-            .foregroundColor(Asset.Colors.errorColor.swiftUIColor)
+            .foregroundColor(Asset.Colors.mainPurple.swiftUIColor)
             .font(.rubikSemiBold(10))
             .multilineTextAlignment(.center)
             .lineLimit(2)
+    }
+    
+    var showHideButton: some View {
+        Button {
+            showPassword.toggle()
+            inFocus = showPassword ? .plain : .secure
+        } label: {
+            Group {
+                if showPassword {
+                    Asset.Images.eyeSlash.swiftUIImage
+                        .resizable()
+                } else {
+                    Asset.Images.eye.swiftUIImage
+                        .resizable()
+                }
+            }
+            .aspectRatio(contentMode: .fit)
+            .foregroundColor(Asset.Colors.mainBlue.swiftUIColor)
+            .frame(width: 20, height: 20)
+        }
     }
     
     var field: some View {
@@ -56,7 +76,7 @@ struct SecureTextField: View {
             Asset.Images.lock.swiftUIImage
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .foregroundStyle(LinearGradient.bluePurpleHorizontal)
+                .foregroundColor(Asset.Colors.mainBlue.swiftUIColor)
                 .frame(width: 20, height: 20)
             ZStack {
                 TextField(placeholder, text: $text)
@@ -71,24 +91,7 @@ struct SecureTextField: View {
             .keyboardType(.asciiCapable)
             .autocorrectionDisabled(true)
             
-            Button {
-                showPassword.toggle()
-                inFocus = showPassword ? .plain : .secure
-            } label: {
-                Group {
-                    if showPassword {
-                        Asset.Images.eyeSlash.swiftUIImage
-                            .resizable()
-                    } else {
-                        Asset.Images.eye.swiftUIImage
-                            .resizable()
-                           
-                    }
-                }
-                .aspectRatio(contentMode: .fit)
-                .foregroundStyle(LinearGradient.bluePurpleHorizontal)
-                .frame(width: 20, height: 20)
-            }
+            showHideButton
         }
         .padding(.horizontal)
         .frame(height: 55)

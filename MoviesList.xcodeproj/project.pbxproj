@@ -19,7 +19,7 @@
 		7A4B0B9629CC8245003C3700 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4B0B9529CC8245003C3700 /* Colors.xcassets */; };
 		7A4B0B9929CC8278003C3700 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4B0B9729CC8278003C3700 /* Strings.swift */; };
 		7A4B0B9A29CC8278003C3700 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4B0B9829CC8278003C3700 /* XCAssets+Generated.swift */; };
-		7AB1670929D5B37900AD80CA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB1670829D5B37900AD80CA /* AppCoordinator.swift */; };
+		7AB1670929D5B37900AD80CA /* AppCoordinatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB1670829D5B37900AD80CA /* AppCoordinatorImpl.swift */; };
 		7AB1670B29D5B4B700AD80CA /* RootPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB1670A29D5B4B700AD80CA /* RootPath.swift */; };
 		7AB1670D29D5B53200AD80CA /* AuthorizationPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB1670C29D5B53200AD80CA /* AuthorizationPath.swift */; };
 		7AB1671029D5BA8300AD80CA /* AppPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB1670F29D5BA8300AD80CA /* AppPath.swift */; };
@@ -28,6 +28,7 @@
 		7AB3CAAE29DAEA2E00248E52 /* LinearGradient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3CAAD29DAEA2E00248E52 /* LinearGradient+Extensions.swift */; };
 		7AB3CAB029DAF42500248E52 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3CAAF29DAF42500248E52 /* Image+Extension.swift */; };
 		7AB3CAB229DAFB8300248E52 /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3CAB129DAFB8300248E52 /* GradientButtonStyle.swift */; };
+		7AB4040029E04CBC00C346E7 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB403FF29E04CBC00C346E7 /* OTPTextField.swift */; };
 		7AC1F18329DD9E8700DECEC6 /* CustomTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1F18229DD9E8700DECEC6 /* CustomTextStyle.swift */; };
 		7AC1F18529DDA04200DECEC6 /* CaptionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1F18429DDA04200DECEC6 /* CaptionButtonStyle.swift */; };
 		7AC1F18929DDA81D00DECEC6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1F18829DDA81D00DECEC6 /* SignUpView.swift */; };
@@ -104,7 +105,7 @@
 		7A4B0B9529CC8245003C3700 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		7A4B0B9729CC8278003C3700 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		7A4B0B9829CC8278003C3700 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
-		7AB1670829D5B37900AD80CA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		7AB1670829D5B37900AD80CA /* AppCoordinatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorImpl.swift; sourceTree = "<group>"; };
 		7AB1670A29D5B4B700AD80CA /* RootPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPath.swift; sourceTree = "<group>"; };
 		7AB1670C29D5B53200AD80CA /* AuthorizationPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationPath.swift; sourceTree = "<group>"; };
 		7AB1670F29D5BA8300AD80CA /* AppPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPath.swift; sourceTree = "<group>"; };
@@ -113,6 +114,7 @@
 		7AB3CAAD29DAEA2E00248E52 /* LinearGradient+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LinearGradient+Extensions.swift"; sourceTree = "<group>"; };
 		7AB3CAAF29DAF42500248E52 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 		7AB3CAB129DAFB8300248E52 /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
+		7AB403FF29E04CBC00C346E7 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		7AC1F18229DD9E8700DECEC6 /* CustomTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextStyle.swift; sourceTree = "<group>"; };
 		7AC1F18429DDA04200DECEC6 /* CaptionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionButtonStyle.swift; sourceTree = "<group>"; };
 		7AC1F18829DDA81D00DECEC6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -271,7 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				7AB1670E29D5BA5A00AD80CA /* Paths */,
-				7AB1670829D5B37900AD80CA /* AppCoordinator.swift */,
+				7AB1670829D5B37900AD80CA /* AppCoordinatorImpl.swift */,
 				7AD9265229DF0C7D005A80C5 /* AuthorizationNavigationView.swift */,
 				7AD9265429DF0F99005A80C5 /* RootView.swift */,
 			);
@@ -454,6 +456,7 @@
 				7AD0253E29DC1F98000A0654 /* SecureTextField.swift */,
 				7AD5A1CC29DD6D6B00AF8D81 /* BackgroundVContainer.swift */,
 				7AD9264429DED7C7005A80C5 /* TagFlowLayout.swift */,
+				7AB403FF29E04CBC00C346E7 /* OTPTextField.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -674,7 +677,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AB3CAB029DAF42500248E52 /* Image+Extension.swift in Sources */,
-				7AB1670929D5B37900AD80CA /* AppCoordinator.swift in Sources */,
+				7AB1670929D5B37900AD80CA /* AppCoordinatorImpl.swift in Sources */,
 				7AD9264129DEC079005A80C5 /* FavoriteGenreView.swift in Sources */,
 				7AB1670D29D5B53200AD80CA /* AuthorizationPath.swift in Sources */,
 				7A4B0B5E29CC77E1003C3700 /* Persistence.swift in Sources */,
@@ -686,6 +689,7 @@
 				7AC1F18329DD9E8700DECEC6 /* CustomTextStyle.swift in Sources */,
 				7AD9265129DF068F005A80C5 /* OTPView.swift in Sources */,
 				7A4B0B9929CC8278003C3700 /* Strings.swift in Sources */,
+				7AB4040029E04CBC00C346E7 /* OTPTextField.swift in Sources */,
 				7A4B0B9A29CC8278003C3700 /* XCAssets+Generated.swift in Sources */,
 				7AD9265529DF0F99005A80C5 /* RootView.swift in Sources */,
 				7ACC03F529DC456200D53748 /* Validation.swift in Sources */,
