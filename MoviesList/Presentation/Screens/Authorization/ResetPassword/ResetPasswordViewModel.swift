@@ -12,7 +12,7 @@ final class ResetPasswordViewModel: ObservableObject {
     @Published var email = ""
     @Published var emailPromt = "res"
     
-    @Published var isEnableButton = false
+    @Published var isEnabledButton = false
     
     init() {
         setup()
@@ -26,7 +26,7 @@ final class ResetPasswordViewModel: ObservableObject {
         
         $email
             .isValid(.email)
-            .assign(to: &$isEnableButton)
+            .assign(to: &$isEnabledButton)
     }
     
 }

@@ -15,7 +15,7 @@ final class NewPasswordViewModel: ObservableObject {
     @Published var repeatPassword = ""
     @Published var repeatPasswordPromt = "resept"
     
-    @Published var isEnableButton = false
+    @Published var isEnabledButton = false
     
     init() {
         setup()
@@ -38,7 +38,7 @@ final class NewPasswordViewModel: ObservableObject {
         .map { a, b in
             return a && b
         }
-        .assign(to: &$isEnableButton)
+        .assign(to: &$isEnabledButton)
         
     }
 }

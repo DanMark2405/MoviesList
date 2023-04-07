@@ -16,12 +16,14 @@ final class LoginViewModel: ObservableObject {
     @Published var password = ""
     @Published var passwordPromt = "resept"
     
-    @Published var isEnableButton = false
+    @Published var isEnabledButton = false
     
     private let useCase: LoginUseCase
+    private let appCoordinator: AppCoordinator
     
-    init(useCase: LoginUseCase) {
+    init(useCase: LoginUseCase, appCoordinator: AppCoordinator) {
         self.useCase = useCase
+        self.appCoordinator = appCoordinator
         setup()
     }
     
@@ -40,11 +42,19 @@ final class LoginViewModel: ObservableObject {
             .map { a, b in
                 return a && b
             }
-            .assign(to: &$isEnableButton)
+            .assign(to: &$isEnabledButton)
+    }
+    
+    func forgotPasswordAction() {
+        appCoordinator.authNavigate(to: .forgotPassword)
+    }
+    
+    func signUp() {
+        appCoordinator.authNavigate(to: .signUp)
     }
     
     func login() {
-        
+        appCoordinator.changeRootView(to: .tabBar)
     }
     
 }

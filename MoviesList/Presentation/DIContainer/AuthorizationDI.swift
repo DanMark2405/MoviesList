@@ -12,16 +12,18 @@ import SwiftUI
 final class AuthorizationDI {
     
     private let useCasesDI: UseCasesDI
+    private let appCoordinator: AppCoordinator
     
-    init(useCasesDI: UseCasesDI) {
+    init(useCasesDI: UseCasesDI, appCoordinator: AppCoordinator) {
         self.useCasesDI = useCasesDI
+        self.appCoordinator = appCoordinator
     }
     
     // MARK: - View
     
     public func makeLoginView() -> LoginView {
         let useCase = useCasesDI.login
-        let viewModel = LoginViewModel(useCase: useCase)
+        let viewModel = LoginViewModel(useCase: useCase, appCoordinator: appCoordinator)
         let view = LoginView(viewModel: viewModel)
         return view
     }
@@ -45,7 +47,21 @@ final class AuthorizationDI {
     }
     
     public func makeUserAvatarView() -> UserAvatarView {
-        
+        let viewModel = UserAvatarViewModel()
+        let view = UserAvatarView(viewModel: viewModel)
+        return view
+    }
+    
+    public func makeOTPView() -> OTPView {
+        let viewModel = OTPViewModel()
+        let view = OTPView(viewModel: viewModel)
+        return view
+    }
+    
+    public func makeNewPasswordView() -> NewPasswordView {
+        let viewModel = NewPasswordViewModel()
+        let view = NewPasswordView(viewModel: viewModel)
+        return view
     }
     
     

@@ -9,7 +9,7 @@ import Combine
 
 final class FavoriteGenreViewModel: ObservableObject {
     
-    @Published var isEnableButton = false
+    @Published var isEnabledButton = false
     
     @Published var genres = ["Adventure", "Comedy", "Action", "Thriller", "Horror", "Romantic", "Drama", "Documentary"]
     @Published var selectedGenres = Set<String>()
@@ -35,7 +35,7 @@ final class FavoriteGenreViewModel: ObservableObject {
             .map { genres in
                 return genres.count >= 3
             }
-            .assign(to: &$isEnableButton)
+            .assign(to: &$isEnabledButton)
     }
     
     

@@ -10,10 +10,12 @@ import SwiftUI
 @main
 struct MoviesListApp: App {
     
+    let appDIContainer = AppDIContainer()
     var body: some Scene {
         WindowGroup {
-            FavoriteGenreView()
+            RootView(coordinator: appDIContainer.appCoordinator)
             
         }
     }
+    
 }

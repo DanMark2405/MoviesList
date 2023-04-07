@@ -40,7 +40,7 @@ struct SignUpView: View {
             Spacer()
             Button("Register", action: {})
                 .buttonStyle(.gradient)
-                .disabled(!viewModel.isEnableButton)
+                .disabled(!viewModel.isEnabledButton)
                 .frame(width: 240, height: 55)
                 .padding(.bottom, 30)
         }
@@ -49,6 +49,6 @@ struct SignUpView: View {
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView()
+        AppDIContainer().authorizationDI.makeSignUpView()
     }
 }

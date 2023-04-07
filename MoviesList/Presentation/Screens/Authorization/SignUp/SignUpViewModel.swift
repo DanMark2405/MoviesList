@@ -22,7 +22,7 @@ final class SignUpViewModel: ObservableObject {
     @Published var repeatPassword = ""
     @Published var repeatPasswordPromt = "resept"
     
-    @Published var isEnableButton = false
+    @Published var isEnabledButton = false
     
     init() {
         setup()
@@ -54,7 +54,7 @@ final class SignUpViewModel: ObservableObject {
         .map { a, b, c, d in
             return a && b && c && d
         }
-        .assign(to: &$isEnableButton)
+        .assign(to: &$isEnabledButton)
         
     }
 }

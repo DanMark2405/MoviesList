@@ -26,7 +26,6 @@ struct BackgroundVContainer<Content: View> : View {
             VStack(spacing: spacing) {
                 content()
             }
-            .animation(.easeInOut)
         }.preferredColorScheme(.dark)
     }
     

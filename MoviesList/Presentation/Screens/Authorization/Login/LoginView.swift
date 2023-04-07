@@ -34,9 +34,9 @@ struct LoginView: View {
                 .padding(.horizontal, 36)
             
             Spacer()
-            Button("Login", action: {})
+            Button("Login", action: { viewModel.login() })
                 .buttonStyle(.gradient)
-                .disabled(!viewModel.isEnableButton)
+                .disabled(!viewModel.isEnabledButton)
                 .frame(width: 240, height: 55)
             
             signUp
@@ -57,7 +57,9 @@ struct LoginView: View {
     
     var forgotButton: some View {
         HStack {
-            Button("Forgot your password", action: {})
+            Button("Forgot your password", action: {
+                viewModel.forgotPasswordAction()
+            })
                 .buttonStyle(.caption)
             Spacer()
         }
@@ -68,7 +70,9 @@ struct LoginView: View {
             Text("Don't have account?")
                 .textStyle(.caption2)
             
-            Button("Sign up", action: {})
+            Button("Sign up", action: {
+                viewModel.signUp()
+            })
                 .buttonStyle(.caption)
         }
     }
@@ -77,12 +81,12 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        AppDIContainer().authorizationDI.makeLoginView()
     }
 }
 
 class Coordinator: ObservableObject {
-    @Published var path = [LoginPath]()
+    @Published var path = [AuthorizationPath]()
     @Published var isMain = false
 }
 
