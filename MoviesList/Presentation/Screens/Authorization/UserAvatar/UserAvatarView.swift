@@ -10,7 +10,7 @@ import PhotosUI
 
 struct UserAvatarView: View {
     
-    @ObservedObject var viewModel = UserAvatarViewModel()
+    @StateObject var viewModel = UserAvatarViewModel()
     
     var body: some View {
         BackgroundVContainer(spacing: 16) {

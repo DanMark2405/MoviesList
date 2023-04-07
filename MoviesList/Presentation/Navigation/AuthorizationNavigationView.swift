@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AuthorizationNavigationView: View {
     
-    @ObservedObject var coordinator: AppCoordinator
+    @StateObject var coordinator: AppCoordinator
     
     var body: some View {
         NavigationStack(path: $coordinator.authPath) {

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OTPView: View {
     
-    @ObservedObject var viewModel: OTPViewModel
+    @StateObject var viewModel: OTPViewModel
     
     var body: some View {
         BackgroundVContainer {

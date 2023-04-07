@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NewPasswordView: View {
-    @ObservedObject var viewModel: NewPasswordViewModel = NewPasswordViewModel()
+    @StateObject var viewModel: NewPasswordViewModel = NewPasswordViewModel()
     
     var body: some View {
         BackgroundVContainer(spacing: 16) {

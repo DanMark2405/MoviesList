@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ResetPasswordView: View {
     
-    @ObservedObject var viewModel: ResetPasswordViewModel = ResetPasswordViewModel()
+    @StateObject var viewModel: ResetPasswordViewModel
     
     var body: some View {
         BackgroundVContainer(spacing: 16) {
@@ -28,7 +28,7 @@ struct ResetPasswordView: View {
                 .padding(.top)
 
             Spacer()
-            Button("Register", action: {})
+            Button("Register", action: { viewModel.confirmAction()})
                 .buttonStyle(.gradient)
                 .disabled(!viewModel.isEnabledButton)
                 .frame(width: 240, height: 55)
@@ -39,6 +39,6 @@ struct ResetPasswordView: View {
 
 struct ResetPasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        ResetPasswordView()
+        AppDIContainer().authorizationDI.makeResetPasswordView()
     }
 }

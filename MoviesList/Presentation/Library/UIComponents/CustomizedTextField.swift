@@ -77,6 +77,7 @@ struct CustomizedTextField: View {
                 .foregroundColor(.white)
                 .font(.rubikRegular(18))
                 .keyboardType(keyboardType)
+                .autocorrectionDisabled(true)
             
         }
         .padding(.horizontal)

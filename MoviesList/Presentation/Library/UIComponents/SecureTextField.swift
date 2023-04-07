@@ -7,10 +7,19 @@
 
 import SwiftUI
 
+extension SecureTextField {
+    private enum TFFocus {
+        case secure
+        case plain
+    }
+}
+
 struct SecureTextField: View {
     
     @Binding var text: String
     @Binding var promt: String
+    
+    @FocusState private var inFocus: TFFocus?
     @State private var showPassword = false
     private let placeholder: String
     
@@ -31,6 +40,7 @@ struct SecureTextField: View {
                     .transition(.promtTransition)
             }
         }.animation(.easeInOut, value: promt.isEmpty)
+            .ignoresSafeArea(.keyboard, edges: .bottom)
     }
     
     var promtView: some View  {
@@ -48,18 +58,22 @@ struct SecureTextField: View {
                 .aspectRatio(contentMode: .fit)
                 .foregroundStyle(LinearGradient.bluePurpleHorizontal)
                 .frame(width: 20, height: 20)
-            Group {
-                if showPassword {
-                    TextField(placeholder, text: $text)
-                } else {
-                    SecureField(placeholder, text: $text)
-                }
-            }  .foregroundColor(.white)
-                .font(.rubikRegular(18))
-                .keyboardType(.asciiCapable)
+            ZStack {
+                TextField(placeholder, text: $text)
+                    .focused($inFocus, equals: .plain)
+                    .opacity(showPassword ? 1 : 0)
+                SecureField(placeholder, text: $text)
+                    .focused($inFocus, equals: .secure)
+                    .opacity(showPassword ? 0 : 1)
+            }
+            .foregroundColor(.white)
+            .font(.rubikRegular(18))
+            .keyboardType(.asciiCapable)
+            .autocorrectionDisabled(true)
             
             Button {
                 showPassword.toggle()
+                inFocus = showPassword ? .plain : .secure
             } label: {
                 Group {
                     if showPassword {

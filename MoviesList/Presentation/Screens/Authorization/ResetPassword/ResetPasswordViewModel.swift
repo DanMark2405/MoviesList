@@ -14,7 +14,10 @@ final class ResetPasswordViewModel: ObservableObject {
     
     @Published var isEnabledButton = false
     
-    init() {
+    private let appCoordinator: AppCoordinator
+    
+    init(appCoordinator: AppCoordinator) {
+        self.appCoordinator = appCoordinator
         setup()
     }
     
@@ -28,5 +31,10 @@ final class ResetPasswordViewModel: ObservableObject {
             .isValid(.email)
             .assign(to: &$isEnabledButton)
     }
+    
+    func confirmAction() {
+        appCoordinator.authNavigate(to: .otp)
+    }
+    
     
 }

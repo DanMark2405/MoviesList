@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FavoriteGenreView: View {
-    @ObservedObject var viewModel: FavoriteGenreViewModel = FavoriteGenreViewModel()
+    @StateObject var viewModel: FavoriteGenreViewModel = FavoriteGenreViewModel()
     
     var body: some View {
         

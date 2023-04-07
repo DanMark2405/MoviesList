@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct RootView: View {
-    @ObservedObject var coordinator: AppCoordinator
+    @StateObject var coordinator: AppCoordinator
     var body: some View {
         switch coordinator.rootView {
         case .login:
             AuthorizationNavigationView(coordinator: coordinator)
         case .tabBar:
-            AuthorizationNavigationView(coordinator: coordinator)
+            UserAvatarView()
         }
     }
 }

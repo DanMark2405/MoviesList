@@ -35,7 +35,7 @@ final class AuthorizationDI {
     }
     
     public func makeResetPasswordView() -> ResetPasswordView {
-        let viewModel = ResetPasswordViewModel()
+        let viewModel = ResetPasswordViewModel(appCoordinator: appCoordinator)
         let view = ResetPasswordView(viewModel: viewModel)
         return view
     }

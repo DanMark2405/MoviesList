@@ -27,6 +27,7 @@ struct BackgroundVContainer<Content: View> : View {
                 content()
             }
         }.preferredColorScheme(.dark)
+            .ignoresSafeArea(.keyboard, edges: .bottom)
     }
     
     
