@@ -12,62 +12,59 @@ struct LoginView: View {
     
     var body: some View {
         BackgroundVContainer {
-            VStack {
-                icon
-                    .padding(.top)
-                
-                Text("Welcome Back")
-                    .textStyle(.largeTitle)
-                    .padding(.top, 30)
-                
-                Text("Login to your account")
-                    .textStyle(.caption)
-                
-                CustomizedTextField.email(text: $viewModel.email, promt: $viewModel.emailPromt)
-                    .padding(.horizontal, 25)
-                    .padding(.top, 32)
-                
-                SecureTextField(text: $viewModel.password, promt: $viewModel.passwordPromt)
-                    .padding(.horizontal, 25)
-                    .padding(.top)
-                
-                forgotButton
-                    .padding(.horizontal, 36)
-                
-                Spacer()
-                Button("Login", action: {
-                    viewModel.loginAction()
-                })
-                    .buttonStyle(.gradient)
-                    .disabled(!viewModel.isEnabledButton)
-                    .frame(width: 240, height: 55)
-                
-                signUp
-                    .frame(height: 16)
-                    .padding(.top, 14)
-            }
-            .animation(.easeInOut, value:
+            
+            Text("Welcome Back")
+                .textStyle(.largeTitle)
+                .padding(.top, 50)
+            
+            Text("Login to your account")
+                .textStyle(.caption)
+            
+            Spacer()
+            
+            Asset.Images.login.swiftUIImage
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            
+            Spacer()
+            
+            CustomizedTextField.email(text: $viewModel.email, promt: $viewModel.emailPromt)
+                .padding(.horizontal, 25)
+                .padding(.top, 32)
+            
+            SecureTextField(text: $viewModel.password, promt: $viewModel.passwordPromt)
+                .padding(.horizontal, 25)
+                .padding(.top)
+            
+            forgotButton
+                .padding(.horizontal, 36)
+                .frame(height: 20)
+            
+            Button("Login", action: {
+                viewModel.loginAction()
+            })
+            .buttonStyle(.gradient)
+            .disabled(!viewModel.isEnabledButton)
+            .frame(width: 240, height: 55)
+            .padding(.top, 100)
+            
+            signUp
+                .frame(height: 16)
+                .padding(.top, 14)
+            
+        }
+        .animation(.easeInOut, value:
                         [viewModel.emailPromt, viewModel.passwordPromt])
-        }
-    }
-    
-    var icon: some View {
-        HStack(spacing: 0) {
-            Asset.Images.appIcon.swiftUIImage
-            Text("Movies\nList")
-                .font(.rubikBold(30))
-                .foregroundStyle(LinearGradient.bluePurpleHorizontal)
-                .lineLimit(2)
-        }
+
     }
     
     var forgotButton: some View {
         HStack {
+            Spacer()
             Button("Forgot your password", action: {
-                viewModel.loginAction()
+                viewModel.forgotPasswordAction()
             })
                 .buttonStyle(.caption)
-            Spacer()
         }
     }
     

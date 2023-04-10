@@ -14,8 +14,15 @@ final class FavoriteGenreViewModel: ObservableObject {
     @Published var genres = ["Adventure", "Comedy", "Action", "Thriller", "Horror", "Romantic", "Drama", "Documentary"]
     @Published var selectedGenres = Set<String>()
     
-    init() {
+    private let appCoordinator: AppCoordinator
+    
+    init(appCoordinator: AppCoordinator) {
+        self.appCoordinator = appCoordinator
         setup()
+    }
+    
+    func confirmAction() {
+        appCoordinator.coordinate(to: RootPath.tabBar)
     }
     
     func isSelected( _ genre: String) -> Bool {

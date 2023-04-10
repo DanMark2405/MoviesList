@@ -12,13 +12,14 @@ struct SignUpView: View {
     var body: some View {
         BackgroundVContainer {
             
-            Spacer()
             Text("Register")
                 .textStyle(.largeTitle)
-                .padding(.top, 30)
+                .padding(.top, 50)
             
             Text("Create your account")
                 .textStyle(.caption)
+            
+            Spacer()
             
             CustomizedTextField.nickname(text: $viewModel.nickname, promt: $viewModel.nicknamePromt)
                 .padding(.horizontal, 25)
@@ -34,18 +35,18 @@ struct SignUpView: View {
             
             SecureTextField("Confirm password", text: $viewModel.repeatPassword, promt: $viewModel.repeatPasswordPromt)
                 .padding(.horizontal, 25)
-                .padding(.top)
+                .padding(.top, 20)
             
-            
-            Spacer()
             Button("Register", action: {
                 viewModel.registerAction()
             })
-                .buttonStyle(.gradient)
-                .disabled(!viewModel.isEnabledButton)
-                .frame(width: 240, height: 55)
-                .padding(.bottom, 30)
+            .buttonStyle(.gradient)
+            .disabled(!viewModel.isEnabledButton)
+            .frame(width: 240, height: 55)
+            .padding(.bottom, 30)
+            .padding(.top, 120)
         }
+        .backButtonHidden(false)
         .animation(.easeInOut, value: [
             viewModel.emailPromt, viewModel.passwordPromt, viewModel.nicknamePromt, viewModel.repeatPasswordPromt
         ])

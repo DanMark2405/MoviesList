@@ -42,14 +42,15 @@ final class LoginViewModel: ObservableObject {
     }
     
     func loginAction() {
-        Task {
-            do {
-                let user = try await useCase.run(email: "some@email.com", password: "123")
-                appCoordinator.coordinate(to: RootPath.tabBar)
-            } catch {
-                
-            }
-        }
+        appCoordinator.coordinate(to: RootPath.tabBar)
+//        Task {
+//            do {
+//                let user = try await useCase.run(email: "some@email.com", password: "123")
+//                appCoordinator.coordinate(to: RootPath.tabBar)
+//            } catch {
+//
+//            }
+//        }
     }
     
     // MARK: - Private

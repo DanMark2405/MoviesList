@@ -42,25 +42,25 @@ final class AuthorizationDI {
     }
     
     public func makeFavoriteGenreView() -> FavoriteGenreView {
-        let viewModel = FavoriteGenreViewModel()
+        let viewModel = FavoriteGenreViewModel(appCoordinator: appCoordinator)
         let view = FavoriteGenreView(viewModel: viewModel)
         return view
     }
     
     public func makeUserAvatarView() -> UserAvatarView {
-        let viewModel = UserAvatarViewModel()
+        let viewModel = UserAvatarViewModel(appCoordinator: appCoordinator)
         let view = UserAvatarView(viewModel: viewModel)
         return view
     }
     
-    public func makeOTPView() -> OTPView {
-        let viewModel = OTPViewModel()
+    public func makeOTPView(isRegister: Bool) -> OTPView {
+        let viewModel = OTPViewModel(isRegister: isRegister, appCoordinator: appCoordinator)
         let view = OTPView(viewModel: viewModel)
         return view
     }
     
     public func makeNewPasswordView() -> NewPasswordView {
-        let viewModel = NewPasswordViewModel()
+        let viewModel = NewPasswordViewModel(appCoordinator: appCoordinator)
         let view = NewPasswordView(viewModel: viewModel)
         return view
     }

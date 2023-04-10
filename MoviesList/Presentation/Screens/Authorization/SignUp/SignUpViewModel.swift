@@ -41,10 +41,11 @@ final class SignUpViewModel: ObservableObject {
     // MARK: - Actions
     
     func registerAction() {
-        let model = AuthModel(nickname: nickname, email: email, password: password)
-        Task {
-            try? await useCase.run(model: model)
-        }
+//        let model = AuthModel(nickname: nickname, email: email, password: password)
+//        Task {
+//            try? await useCase.run(model: model)
+//        }
+        appCoordinator.coordinate(to: AuthorizationPath.selectUserAvatar)
     }
     
     // MARK: - Private

@@ -13,7 +13,7 @@ struct IconButtonStyle: ButtonStyle {
         configuration.label
             .background(Asset.Colors.iconBG.swiftUIColor)
             .cornerRadius(15)
-            .foregroundStyle(LinearGradient.purpleBlueVertical)
+            .foregroundStyle(Asset.Colors.mainBlue.swiftUIColor)
             .scaleEffect(configuration.isPressed ? 0.9 : 1)
             .opacity(configuration.isPressed ? 0.9 : 1)
     }

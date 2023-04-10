@@ -14,7 +14,6 @@ struct MoviesListApp: App {
     var body: some Scene {
         WindowGroup {
             RootView(coordinator: appDIContainer.appCoordinator)
-            
         }
     }
     

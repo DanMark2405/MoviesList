@@ -12,28 +12,37 @@ struct ResetPasswordView: View {
     @StateObject var viewModel: ResetPasswordViewModel
     
     var body: some View {
-        BackgroundVContainer(spacing: 16) {
-            Spacer()
+        BackgroundVContainer() {
             Text("Reset password")
-                .textStyle(.title)
+                .textStyle(.largeTitle)
+                .padding(.top, 50)
+            
+            Spacer()
             
             Asset.Images.resetPassword.swiftUIImage
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding(.horizontal, 100)
             
+            Spacer()
             Text("Enter the email address associated with your account and we will send an email with code on how to reset your password")
                 .textStyle(.caption)
                 .multilineTextAlignment(.center)
+                .padding(.horizontal, 60)
             
             CustomizedTextField.email(text: $viewModel.email, promt: $viewModel.emailPromt)
                 .padding(.horizontal, 25)
                 .padding(.top)
-
-            Spacer()
+            
             Button("Register", action: { viewModel.confirmAction()})
                 .buttonStyle(.gradient)
                 .disabled(!viewModel.isEnabledButton)
                 .frame(width: 240, height: 55)
                 .padding(.bottom, 30)
+                .padding(.top, 120)
         }
+        .backButtonHidden(false)
+        .animation(.easeInOut, value: viewModel.emailPromt)
     }
 }
 

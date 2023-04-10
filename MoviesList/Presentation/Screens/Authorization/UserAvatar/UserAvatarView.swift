@@ -10,20 +10,24 @@ import PhotosUI
 
 struct UserAvatarView: View {
     
-    @StateObject var viewModel = UserAvatarViewModel()
+    @StateObject var viewModel: UserAvatarViewModel
     
     var body: some View {
-        BackgroundVContainer(spacing: 16) {
-            Spacer()
+        BackgroundVContainer() {
+            Text("Avatar")
+                .textStyle(.largeTitle)
+                .padding(.top, 50)
             
             Text("Set a photo for your profile")
-                .textStyle(.title)
-                .padding(.horizontal, 50)
+                .textStyle(.caption)
             
+     
+            Spacer()
             avatar
             
             Spacer()
-            Button("Continue", action: {})
+            
+            Button("Continue", action: { viewModel.confirmAction() })
                 .buttonStyle(.gradient)
                 .frame(width: 240, height: 55)
                 .padding(.bottom, 30)
@@ -34,6 +38,7 @@ struct UserAvatarView: View {
     var avatar: some View {
         viewModel.image
             .resizable()
+            .aspectRatio(contentMode: .fill)
             .frame(width: 270, height: 270)
             .clipShape(Circle())
             .overlay {
@@ -43,7 +48,7 @@ struct UserAvatarView: View {
             }
             .overlay {
                 Button(action: { viewModel.deleteImage() }) {
-                    Asset.Images.lock.swiftUIImage
+                    Asset.Images.bin.swiftUIImage
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 20)
@@ -64,7 +69,7 @@ struct UserAvatarView: View {
                 .fill(Asset.Colors.iconBG.swiftUIColor)
                 .frame(width: 40, height: 40)
                 .overlay {
-                    Image(systemName: "pencil")
+                    Asset.Images.pencil.swiftUIImage
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 20)
@@ -76,6 +81,6 @@ struct UserAvatarView: View {
 
 struct SelectAvatarView_Previews: PreviewProvider {
     static var previews: some View {
-        UserAvatarView()
+        AppDIContainer().authorizationDI.makeUserAvatarView()
     }
 }

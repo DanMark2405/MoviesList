@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct FavoriteGenreView: View {
-    @StateObject var viewModel: FavoriteGenreViewModel = FavoriteGenreViewModel()
+    @StateObject var viewModel: FavoriteGenreViewModel
     
     var body: some View {
         
         BackgroundVContainer {
-            Text("Select favorite genres")
+            
+            Text("Choise genres")
                 .textStyle(.largeTitle)
+                .padding(.top, 50)
             
             Text("Сhoose your favorite genres")
                 .textStyle(.caption)
@@ -25,12 +27,12 @@ struct FavoriteGenreView: View {
                 .padding(.horizontal, 30)
             
             Spacer()
-            Button("Register", action: {})
+            Button("Confirm", action: { viewModel.confirmAction() })
                 .buttonStyle(.gradient)
                 .disabled(!viewModel.isEnabledButton)
                 .frame(width: 240, height: 55)
                 .padding(.bottom, 30)
-        }
+        }.backButtonHidden(false)
     }
     
     var tagView: some View {
@@ -63,7 +65,7 @@ struct FavoriteGenreView: View {
 
 struct FavoriteGenreView_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteGenreView()
+        AppDIContainer().authorizationDI.makeFavoriteGenreView()
     }
 }
 

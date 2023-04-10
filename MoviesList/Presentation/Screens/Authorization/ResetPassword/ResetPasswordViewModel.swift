@@ -33,7 +33,7 @@ final class ResetPasswordViewModel: ObservableObject {
     }
     
     func confirmAction() {
-        appCoordinator.coordinate(to: AuthorizationPath.otp)
+        appCoordinator.coordinate(to: AuthorizationPath.resetPasswordOTP)
     }
     
     

@@ -49,6 +49,7 @@ struct SecureTextField: View {
             .font(.rubikSemiBold(10))
             .multilineTextAlignment(.center)
             .lineLimit(2)
+            .fixedSize(horizontal: false, vertical: true)
     }
     
     var showHideButton: some View {

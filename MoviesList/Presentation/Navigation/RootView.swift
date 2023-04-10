@@ -14,7 +14,7 @@ struct RootView: View {
         case .login:
             AuthorizationNavigationView(coordinator: coordinator)
         case .tabBar:
-            UserAvatarView()
+            AppDIContainer().authorizationDI.makeUserAvatarView()
         }
     }
 }

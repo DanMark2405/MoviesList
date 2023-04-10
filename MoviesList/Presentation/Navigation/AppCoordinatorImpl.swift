@@ -38,8 +38,10 @@ class AppCoordinatorImpl: ObservableObject {
         switch path {
         case .signUp:
             appDI.authorizationDI.makeSignUpView()
-        case .otp:
-            appDI.authorizationDI.makeOTPView()
+        case .resetPasswordOTP:
+            appDI.authorizationDI.makeOTPView(isRegister: false)
+        case .registerOTP:
+            appDI.authorizationDI.makeOTPView(isRegister: true)
         case .forgotPassword:
             appDI.authorizationDI.makeResetPasswordView()
         case .newPassword:

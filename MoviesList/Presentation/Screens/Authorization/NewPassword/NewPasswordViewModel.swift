@@ -17,7 +17,10 @@ final class NewPasswordViewModel: ObservableObject {
     
     @Published var isEnabledButton = false
     
-    init() {
+    private let appCoordinator: AppCoordinator
+    
+    init(appCoordinator: AppCoordinator) {
+        self.appCoordinator = appCoordinator
         setup()
     }
     
@@ -39,6 +42,10 @@ final class NewPasswordViewModel: ObservableObject {
             return a && b
         }
         .assign(to: &$isEnabledButton)
-        
     }
+    
+    func confirmAction() {
+        appCoordinator.coordinate(to: RootPath.tabBar)
+    }
+    
 }

@@ -20,7 +20,7 @@ extension CustomizedTextField {
         .init(text: text,
               promt: promt,
               placeholder: L10n.Common.nickname,
-              image: Asset.Images.lock.swiftUIImage,
+              image: Asset.Images.person.swiftUIImage,
               keyboardType: .default)
     }
     

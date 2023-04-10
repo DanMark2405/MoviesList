@@ -16,9 +16,15 @@ class UserAvatarViewModel: ObservableObject {
     @Published var showDeleteButton = false
     
     private var cancellable = Set<AnyCancellable>()
+    private let appCoordinator: AppCoordinator
     
-    init() {
+    init(appCoordinator: AppCoordinator) {
+        self.appCoordinator = appCoordinator
         setup()
+    }
+    
+    func confirmAction() {
+        appCoordinator.coordinate(to: AuthorizationPath.selectFavoriteGenre)
     }
     
     private func setup() {

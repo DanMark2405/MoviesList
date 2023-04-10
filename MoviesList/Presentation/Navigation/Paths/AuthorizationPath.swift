@@ -13,5 +13,6 @@ enum AuthorizationPath: AppPath {
     case newPassword
     case selectUserAvatar
     case selectFavoriteGenre
-    case otp
+    case resetPasswordOTP
+    case registerOTP
 }
