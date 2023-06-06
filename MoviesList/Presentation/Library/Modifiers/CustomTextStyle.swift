@@ -12,6 +12,7 @@ enum CustomViewStyle {
     case title
     case caption
     case caption2
+    case subtitle
 }
 
 extension View {
@@ -36,6 +37,10 @@ extension View {
                 .font(.rubikSemiBold(25))
                 .foregroundStyle(LinearGradient.bluePurpleHorizontal)
                 .multilineTextAlignment(.center)
+        case .subtitle:
+            self
+                .font(.rubikMedium(18))
+                .foregroundStyle(.white)
         }
     }
 }

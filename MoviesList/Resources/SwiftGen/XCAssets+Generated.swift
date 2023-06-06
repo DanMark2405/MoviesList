@@ -38,6 +38,7 @@ internal enum Asset {
     internal static let accentColor = ColorAsset(name: "AccentColor")
     internal static let appIcon = ImageAsset(name: "appIcon")
     internal static let avatar = ImageAsset(name: "avatar")
+    internal static let babylon = ImageAsset(name: "babylon")
     internal static let back = ImageAsset(name: "back")
     internal static let bin = ImageAsset(name: "bin")
     internal static let email = ImageAsset(name: "email")

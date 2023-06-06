@@ -52,9 +52,7 @@ class AppCoordinatorImpl: ObservableObject {
             appDI.authorizationDI.makeFavoriteGenreView()
         }
     }
-    
-
-    
+        
 }
 
  //MARK: - Implementation AppCoordinator

@@ -16,7 +16,6 @@ struct BackgroundVContainer<Content: View> : View {
     private var isBackButtonHidden = true
     
     init(spacing: CGFloat = 0, background: Color = Asset.Colors.backgroundColor.swiftUIColor, @ViewBuilder content: @escaping () -> Content) {
-        //self.showBackButton = showBackButton
         self.content = content
         self.background = background
         self.spacing = spacing
