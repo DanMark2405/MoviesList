@@ -13,7 +13,7 @@ struct MoviesListApp: App {
     let appDIContainer = AppDIContainer()
     var body: some Scene {
         WindowGroup {
-            RootView(coordinator: appDIContainer.appCoordinator)
+            ProfileView()//RootView(coordinator: appDIContainer.appCoordinator)
         }
     }
     

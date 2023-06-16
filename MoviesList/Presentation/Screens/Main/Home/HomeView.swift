@@ -19,6 +19,10 @@ struct HomeView: View {
                 list
             }
         }.animation(.easeOut, value: viewModel.selectedType)
+            .overlay(alignment: .bottom) {
+                tab.padding(.horizontal)
+                    .frame(width: 370)
+            }
     }
     
     var title: some View {
@@ -30,6 +34,7 @@ struct HomeView: View {
                 
             } label: {
                 Image(systemName: "magnifyingglass")
+                    .font(.title3.bold())
                     .padding()
             }
             .buttonStyle(.icon)
@@ -45,14 +50,53 @@ struct HomeView: View {
     var gridItems: [GridItem] = [.init(.flexible()), .init(.flexible())]
     var list: some View {
         LazyVGrid(columns: gridItems) {
-            ForEach(0...10, id: \.self) { int in
+            ForEach(MovieModel.arr(), id: \.self.title) { int in
                 Button {
                     
                 } label: {
-                    MovieCellView()
+                    MovieCellView( movie: int)
                 }
             }
         }
+    }
+    
+    var tab: some View {
+        HStack {
+            VStack {
+                Asset.Images.home.swiftUIImage
+                    .resizable()
+                    .frame(width: 25, height: 25)
+                    
+                Text("Home")
+                    .font(.rubikMedium(12))
+            }
+            .foregroundStyle(LinearGradient.bluePurpleDiagonal)
+            Spacer()
+            VStack {
+                Asset.Images.addNote.swiftUIImage
+                    .resizable()
+                    .frame(width: 25, height: 25)
+                    
+                Text("Notes")
+                    .font(.rubikMedium(12))
+            }
+            .foregroundColor(Asset.Colors.textGray.swiftUIColor)
+            Spacer()
+            VStack {
+                Asset.Images.profile.swiftUIImage
+                    .resizable()
+                    .frame(width: 25, height: 25)
+                    
+                Text("Profile")
+                    .font(.rubikMedium(12))
+            }
+            .foregroundColor(Asset.Colors.textGray.swiftUIColor)
+            
+        }
+        .padding(.vertical)
+        .padding(.horizontal, 40)
+            .background(RoundedRectangle(cornerRadius: 27)
+                .foregroundColor(Asset.Colors.backgroundColor.swiftUIColor))
     }
 }
 

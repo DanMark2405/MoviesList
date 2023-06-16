@@ -6,12 +6,33 @@
 //
 
 import SwiftUI
-
+struct MovieModel {
+    let title: String
+    let rate: String
+    let isFavorite: Bool
+    let image: Image
+    let year: String
+    let jenres: String
+    
+    static func arr() -> [MovieModel] {
+        [
+            .init(title: "Pulp Fiction", rate: "8.9", isFavorite: true, image: Asset.Images.pulp.swiftUIImage, year: "1994", jenres: "Crime, Drama"),
+       
+            .init(title: "Django Unchained", rate: "8.4", isFavorite: false, image: Asset.Images.django.swiftUIImage, year: "2012", jenres: "Western, Drama"),
+            .init(title: "The Gentlemen", rate: "7.8", isFavorite: true, image: Asset.Images.gentelmen.swiftUIImage, year: "2019", jenres: "Comedy, Action, Crime"),
+            .init(title: "Babylon", rate: "7.2", isFavorite: true, image: Asset.Images.babylon.swiftUIImage, year: "2022", jenres: "Comedy, Drama, History"),
+            .init(title: "Once Upon a Time in... Hollywood", rate: "7.6", isFavorite: false, image: Asset.Images.hollywood.swiftUIImage, year: "2019", jenres: "Comedy, Drama"),
+           
+            .init(title: "Inception", rate: "8.8", isFavorite: false, image: Asset.Images.inception.swiftUIImage, year: "2010", jenres: "Action,Adventure,Sci-Fi,Thriller")
+        ]
+    }
+}
 struct MovieCellView: View {
     @State var isFavorite = false
+    var movie: MovieModel
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
-            Asset.Images.babylon.swiftUIImage
+            movie.image
                 .resizable()
                 .cornerRadius(27)
                 .overlay(alignment: .topLeading) {
@@ -24,15 +45,15 @@ struct MovieCellView: View {
                     
                 }
             
-            Text("Babylon")
+            Text(movie.title)
                 .foregroundColor(.white)
                 .font(.rubikMedium(18))
                 .padding(.horizontal, 15)
                 .padding(.top, 5)
             HStack {
-                Text("Comedy, Drama")
+                Text(movie.jenres)
                     .textStyle(.caption2)
-                Text("2022")
+                Text(movie.year)
                     .textStyle(.caption2)
             }.lineLimit(1)
             
@@ -45,7 +66,7 @@ struct MovieCellView: View {
         HStack(spacing: 4) {
             Image(systemName: "star.fill")
                 .foregroundColor(Asset.Colors.mainBlue.swiftUIColor)
-            Text("9.8")
+            Text(movie.rate)
                 .font(.rubikMedium(12))
         }
         .foregroundColor(.white)
@@ -58,11 +79,11 @@ struct MovieCellView: View {
     }
     
     private var like: some View {
-        Button(action: {isFavorite.toggle()}) {
+        Button(action: {}) {
             Image(systemName: "heart.fill")
                 .font(.title2)
                 .padding(10)
-                .foregroundColor(isFavorite ? Asset.Colors.mainPurple.swiftUIColor :
+                .foregroundColor(movie.isFavorite ? Asset.Colors.mainPurple.swiftUIColor :
                                     Asset.Colors.textGray.swiftUIColor)
         }
         .buttonStyle(.icon)
@@ -75,8 +96,8 @@ struct MovieCellView_Previews: PreviewProvider {
         ZStack {
             Color.black
             HStack {
-                MovieCellView()
-                MovieCellView()
+//                MovieCellView()
+//                MovieCellView()
             }
         }
     }

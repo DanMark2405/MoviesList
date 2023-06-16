@@ -36,16 +36,16 @@ struct ProfileView: View {
     
     private var avatar: some View {
         VStack {
-            Asset.Images.babylon.swiftUIImage
+            Asset.Images.margot.swiftUIImage
                 .resizable()
                 .frame(width: 120, height: 120)
                 .clipShape(Circle())
             
-            Text("Nickname")
+            Text("MargotRobbie")
                 .foregroundColor(.white)
                 .font(.rubikMedium(25))
             
-            Text("emailmail.com")
+            Text("margot@hollywood.com")
                 .textStyle(.caption2)
         }
     }
@@ -71,11 +71,11 @@ struct ProfileView: View {
     var gridItems: [GridItem] = [.init(.flexible()), .init(.flexible())]
     var list: some View {
         LazyVGrid(columns: gridItems, spacing: 16) {
-            ForEach(0...10, id: \.self) { int in
+            ForEach(ListModel.arr(), id: \.self.title) { int in
                 Button {
                     
                 } label: {
-                    MovieListCell()
+                    MovieListCell(list: int)
                 }
             }
         }
@@ -85,5 +85,24 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
+    }
+}
+
+struct ListModel {
+    let title: String
+    let image: Image
+    let count: String
+    
+    static func arr() -> [ListModel] {
+        [
+            .init(title: "Favorite", image: Asset.Images.favorite.swiftUIImage, count: "4 movies"),
+            .init(title: "Notes", image: Asset.Images.notes.swiftUIImage, count: "10 movies"),
+            .init(title: "Watched", image: Asset.Images.watched.swiftUIImage, count: "15 movies"),
+            .init(title: "Watch Later", image: Asset.Images.later.swiftUIImage, count: "2 movies"),
+            .init(title: "2022", image: Asset.Images.babylon.swiftUIImage, count: "5 movies"),
+            .init(title: "Disgusting", image: Asset.Images.fast.swiftUIImage, count: "1 movies"),
+            .init(title: "Actions", image: Asset.Images.django.swiftUIImage, count: "2 movies"),
+            .init(title: "Love", image: Asset.Images.gentelmen.swiftUIImage, count: "2 movies"),
+        ]
     }
 }

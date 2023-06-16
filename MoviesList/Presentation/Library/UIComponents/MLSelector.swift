@@ -27,7 +27,8 @@ struct SelectorButton: View {
             selected = text
         } label: {
             Text(text)
-                .textStyle(selected == text ? .title : .caption)
+                .font(selected == text ? .rubikSemiBold(30) : .rubikRegular(16))
+                .foregroundColor(selected == text ? .white : Asset.Colors.textGray.swiftUIColor)
         }
 
     }

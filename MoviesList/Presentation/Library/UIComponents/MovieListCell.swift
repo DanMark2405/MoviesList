@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct MovieListCell: View {
+    var list: ListModel
     var body: some View {
         HStack {
-            Asset.Images.babylon.swiftUIImage
+            list.image
                 .resizable()
                 .frame(width: 60, height: 80)
                 .cornerRadius(16)
             
             VStack {
-                Text("Favorite")
+                Text(list.title)
                     .textStyle(.subtitle)
                 
-                Text("8 movies")
+                Text(list.count)
                     .textStyle(.caption2)
             }
         }
@@ -30,6 +31,6 @@ struct MovieListCell: View {
 
 struct MovieListCell_Previews: PreviewProvider {
     static var previews: some View {
-        MovieListCell()
+        Text("")//MovieListCell()
     }
 }

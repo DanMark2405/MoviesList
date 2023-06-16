@@ -38,6 +38,10 @@
 		7AB3CAB029DAF42500248E52 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3CAAF29DAF42500248E52 /* Image+Extension.swift */; };
 		7AB3CAB229DAFB8300248E52 /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3CAB129DAFB8300248E52 /* GradientButtonStyle.swift */; };
 		7AB4040029E04CBC00C346E7 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB403FF29E04CBC00C346E7 /* OTPTextField.swift */; };
+		7AB562B62A30C0D800AB1E16 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB562B52A30C0D800AB1E16 /* SearchView.swift */; };
+		7AB562B82A30C0E500AB1E16 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB562B72A30C0E500AB1E16 /* SearchViewModel.swift */; };
+		7AB562BB2A30C15100AB1E16 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB562BA2A30C15100AB1E16 /* NotesView.swift */; };
+		7AB562BD2A30C15D00AB1E16 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB562BC2A30C15D00AB1E16 /* NotesViewModel.swift */; };
 		7AC1F18329DD9E8700DECEC6 /* CustomTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1F18229DD9E8700DECEC6 /* CustomTextStyle.swift */; };
 		7AC1F18529DDA04200DECEC6 /* CaptionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1F18429DDA04200DECEC6 /* CaptionButtonStyle.swift */; };
 		7AC1F18929DDA81D00DECEC6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1F18829DDA81D00DECEC6 /* SignUpView.swift */; };
@@ -136,6 +140,10 @@
 		7AB3CAAF29DAF42500248E52 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 		7AB3CAB129DAFB8300248E52 /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
 		7AB403FF29E04CBC00C346E7 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
+		7AB562B52A30C0D800AB1E16 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		7AB562B72A30C0E500AB1E16 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		7AB562BA2A30C15100AB1E16 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		7AB562BC2A30C15D00AB1E16 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
 		7AC1F18229DD9E8700DECEC6 /* CustomTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextStyle.swift; sourceTree = "<group>"; };
 		7AC1F18429DDA04200DECEC6 /* CaptionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionButtonStyle.swift; sourceTree = "<group>"; };
 		7AC1F18829DDA81D00DECEC6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -362,6 +370,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		7AB562B22A30C0A500AB1E16 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				7AB562B52A30C0D800AB1E16 /* SearchView.swift */,
+				7AB562B72A30C0E500AB1E16 /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		7AB562B92A30C14000AB1E16 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				7AB562BA2A30C15100AB1E16 /* NotesView.swift */,
+				7AB562BC2A30C15D00AB1E16 /* NotesViewModel.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
 		7AC0E76429F1355900FB6513 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -539,6 +565,8 @@
 		7AECEA2229D1AC2D004129AA /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				7AB562B92A30C14000AB1E16 /* Notes */,
+				7AB562B22A30C0A500AB1E16 /* Search */,
 				7AAF28552A2FBE190098F92A /* Profile */,
 				7A55CDE32A2F2339007BD4F7 /* MovieDetail */,
 				7AC0E76429F1355900FB6513 /* Main */,
@@ -750,6 +778,7 @@
 				7AB1670D29D5B53200AD80CA /* AuthorizationPath.swift in Sources */,
 				7A4B0B5E29CC77E1003C3700 /* Persistence.swift in Sources */,
 				7AECEA2A29D1C09A004129AA /* Assets+SwiftUI.swift in Sources */,
+				7AB562B82A30C0E500AB1E16 /* SearchViewModel.swift in Sources */,
 				7AAF28572A2FBE350098F92A /* ProfileViewModel.swift in Sources */,
 				7ADE995C29FBEB3F00D6A20F /* HomeView.swift in Sources */,
 				7AECEA2F29D1C577004129AA /* LoginViewModel.swift in Sources */,
@@ -777,8 +806,11 @@
 				7AC1F19729DDC69100DECEC6 /* IconButtonStyle.swift in Sources */,
 				7AB3CAB229DAFB8300248E52 /* GradientButtonStyle.swift in Sources */,
 				7AB3CAAE29DAEA2E00248E52 /* LinearGradient+Extensions.swift in Sources */,
+				7AB562BD2A30C15D00AB1E16 /* NotesViewModel.swift in Sources */,
 				7AD9264C29DEFE22005A80C5 /* AuthorizationDI.swift in Sources */,
+				7AB562BB2A30C15100AB1E16 /* NotesView.swift in Sources */,
 				7A55CDE72A2F2379007BD4F7 /* MovieDetailViewModel.swift in Sources */,
+				7AB562B62A30C0D800AB1E16 /* SearchView.swift in Sources */,
 				7ACC03F929DC513000D53748 /* AnyTransition+Extensions.swift in Sources */,
 				7A55CDEB2A2F28E8007BD4F7 /* IconModifier.swift in Sources */,
 				7AD9264A29DEF8CC005A80C5 /* UseCasesDI.swift in Sources */,
