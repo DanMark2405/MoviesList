@@ -16,14 +16,14 @@ struct MovieModel {
     
     static func arr() -> [MovieModel] {
         [
-            .init(title: "Pulp Fiction", rate: "8.9", isFavorite: true, image: Asset.Images.pulp.swiftUIImage, year: "1994", jenres: "Crime, Drama"),
+//            .init(title: "Pulp Fiction", rate: "8.9", isFavorite: true, image: Asset.Images.pulp.swiftUIImage, year: "1994", jenres: "Crime, Drama"),
        
-            .init(title: "Django Unchained", rate: "8.4", isFavorite: false, image: Asset.Images.django.swiftUIImage, year: "2012", jenres: "Western, Drama"),
-            .init(title: "The Gentlemen", rate: "7.8", isFavorite: true, image: Asset.Images.gentelmen.swiftUIImage, year: "2019", jenres: "Comedy, Action, Crime"),
-            .init(title: "Babylon", rate: "7.2", isFavorite: true, image: Asset.Images.babylon.swiftUIImage, year: "2022", jenres: "Comedy, Drama, History"),
-            .init(title: "Once Upon a Time in... Hollywood", rate: "7.6", isFavorite: false, image: Asset.Images.hollywood.swiftUIImage, year: "2019", jenres: "Comedy, Drama"),
-           
-            .init(title: "Inception", rate: "8.8", isFavorite: false, image: Asset.Images.inception.swiftUIImage, year: "2010", jenres: "Action,Adventure,Sci-Fi,Thriller")
+            .init(title: "Django Unchained", rate: "8.4", isFavorite: false, image: Asset.Images.django.swiftUIImage, year: "2012", jenres: "Western, Drama")
+//            .init(title: "The Gentlemen", rate: "7.8", isFavorite: true, image: Asset.Images.gentelmen.swiftUIImage, year: "2019", jenres: "Comedy, Action, Crime"),
+//            .init(title: "Babylon", rate: "7.2", isFavorite: true, image: Asset.Images.babylon.swiftUIImage, year: "2022", jenres: "Comedy, Drama, History"),
+//            .init(title: "Once Upon a Time in... Hollywood", rate: "7.6", isFavorite: false, image: Asset.Images.hollywood.swiftUIImage, year: "2019", jenres: "Comedy, Drama"),
+//           
+//            .init(title: "Inception", rate: "8.8", isFavorite: false, image: Asset.Images.inception.swiftUIImage, year: "2010", jenres: "Action,Adventure,Sci-Fi,Thriller")
         ]
     }
 }

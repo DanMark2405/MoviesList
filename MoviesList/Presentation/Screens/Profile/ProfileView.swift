@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @Environment(\.openURL) var openURL
     @StateObject var viewModel = ProfileViewModel()
     var body: some View {
         BackgroundVContainer {
             ScrollView(showsIndicators: false) {
                 settings
                 avatar
+                    .padding(.bottom)
                 addList
                     .padding(.bottom)
                 list
@@ -25,7 +27,9 @@ struct ProfileView: View {
     private var settings: some View {
         HStack {
             Spacer()
-            Button(action: {}) {
+            Button(action: {
+                openURL(URL(string: "https://www.imdb.com/video/vi3270100249/?playlistId=tt10640346&ref_=tt_pr_ov_vi")!)
+            }) {
                 Asset.Images.gear.swiftUIImage
                     .resizable()
                     .frame(width: 20, height: 20)
@@ -42,11 +46,11 @@ struct ProfileView: View {
                 .clipShape(Circle())
             
             Text("MargotRobbie")
-                .foregroundColor(.white)
-                .font(.rubikMedium(25))
+                .textStyle(.title)
             
-            Text("margot@hollywood.com")
-                .textStyle(.caption2)
+            Text("margot@hollywoodcom")
+                .foregroundColor(.white)
+                .font(.rubikMedium(13))
         }
     }
     

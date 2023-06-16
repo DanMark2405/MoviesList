@@ -84,7 +84,7 @@ struct CustomizedTextField: View {
         .frame(height: 55)
         .background(
             RoundedRectangle(cornerRadius: 15)
-                .fill(Asset.Colors.textFieldGrey.swiftUIColor)
+                .fill(Asset.Colors.iconBG.swiftUIColor)
         )
     }
 
